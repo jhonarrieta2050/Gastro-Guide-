@@ -305,6 +305,8 @@ public class Register extends javax.swing.JFrame {
         
         loggin.setVisible(true);
         this.setVisible(false);
+       loggin.setControl(control);
+        
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void loginBtmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBtmActionPerformed
