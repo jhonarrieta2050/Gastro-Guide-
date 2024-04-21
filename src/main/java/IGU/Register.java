@@ -296,11 +296,12 @@ public class Register extends javax.swing.JFrame {
             
         String nombre = nameText.getText();
         String email = emailText.getText();
-        String contrasena = passwordText.getText();
+        char[] contrasena = passwordText.getPassword();
+        String contrasenaa = new String(contrasena);
         
-        control.guardar(nombre,email,contrasena);
+        control.guardar(nombre,email,contrasenaa);
         
-        JOptionPane.showMessageDialog(null, "Su cuenta a sido creada con exito!");
+        JOptionPane.showMessageDialog(null, "Account has create succed!");
         
         loggin.setVisible(true);
         this.setVisible(false);
