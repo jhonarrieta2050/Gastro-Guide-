@@ -197,7 +197,7 @@ private Controlador controlador;
         
         if(pasar){
             
-            JOptionPane.showMessageDialog(null, "Welcome back!");
+            JOptionPane.showMessageDialog(null, "Bienvenido!");
             
             this.setVisible(false);
             
@@ -207,7 +207,7 @@ private Controlador controlador;
             
         }else{
             
-            JOptionPane.showMessageDialog(null, "Incorrect email or password!");
+            JOptionPane.showMessageDialog(null, "Email o contrasena incorrecta!");
         }
         
         
