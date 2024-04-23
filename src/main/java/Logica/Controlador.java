@@ -70,7 +70,57 @@ public class Controlador {
              return false;
                  
              }
+         
+         public String obtenerDatos(String variable,String contrasena){
+             
+             Usuario usuarioPrueba= new Usuario();
+             
+             ArrayList<Usuario> listaUsuarios = almacenar.obtenerBaseDatos();
+             
+             for(Usuario usuario : listaUsuarios){
+                 
+                 if(usuario.getContrasena().equals(contrasena)){
+                     
+                     usuarioPrueba = usuario;
+                     
+                 }
+                 }
+
+                            if (variable.equals("nombre")) {
+                   return usuarioPrueba.getName();
+               } else if (variable.equals("apellido")) {
+                   return usuarioPrueba.getApellido();
+               } else if (variable.equals("genero")) {
+                   return usuarioPrueba.getGenero();
+               } else if (variable.equals("email")) {
+                   return usuarioPrueba.getCorreo();
+               } else if (variable.equals("contrasena")) {
+                   return usuarioPrueba.getContrasena();
+               } else {
+                   // Manejo de caso cuando la variable no coincide con ningún atributo conocido
+                   return "Atributo no válido";
+               }
+                 
+             }
+         
+         public Usuario verificarContrasena(String contrasena){
+             
+              Usuario usuarioPrueba= new Usuario();
+             
+             ArrayList<Usuario> listaUsuarios = almacenar.obtenerBaseDatos();
+             
+             for(Usuario usuario : listaUsuarios){
+                 
+                 if(usuario.getContrasena().equals(contrasena)){
+                     
+                     return usuarioPrueba = usuario;
+                     
+                 }
+         }
+           return usuarioPrueba;
 }
+}
+
         
     
      
