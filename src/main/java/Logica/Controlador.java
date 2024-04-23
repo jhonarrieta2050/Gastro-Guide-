@@ -11,13 +11,14 @@ public class Controlador {
      private String contrasenaTemporal;
      private Usuario usuarioPrueba;
         
-        public void guardar(String nombre ,String apellido,String genero,Date nacimiento, String email, String contrasena){
+        public void guardar(int id,String nombre ,String apellido,String genero,Date nacimiento, String email, String contrasena){
             
             
             
             
                Usuario usuario = new Usuario();
                
+               usuario.setId(id);
                usuario.setName(nombre);
                usuario.setApellido(apellido);
                usuario.setGenero(genero);
@@ -73,7 +74,12 @@ public class Controlador {
                  
              }
          
-        
+        public void cambiarDatos(String nombre,String apellido,String genero,String email,String contrasena){
+            
+            
+            
+            
+        }
          
          public void verificarContrasena(String contrasena){
              

@@ -3,16 +3,28 @@ package Logica;
 import java.util.Date;
 
 public class Usuario {
-    
+    private int id;
     private String name;
     private String apellido;
     private String genero;
     private String correo;
     private String contrasena;
     private Date nacimiento;
-
+    
+    
+    
+    
     public Usuario() {
     }
+    
+    public int getId(){
+        return id;
+    }
+    
+    public void setId(int id){
+        this.id = id;
+    }
+    
 
     public String getName() {
         return name;

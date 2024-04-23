@@ -5,7 +5,7 @@ import Logica.Controlador;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.text.ParseException;
-
+import java.util.Random;
      
 public class Register extends javax.swing.JFrame {
     
@@ -289,7 +289,7 @@ public class Register extends javax.swing.JFrame {
             
         
         
-        
+        int id = new Random().nextInt();
         String nombre = nameText.getText();
         String email = emailText.getText();
         char[] contrasena = passwordText.getPassword();
@@ -323,7 +323,7 @@ public class Register extends javax.swing.JFrame {
         
         
         
-        control.guardar(nombre,apellido,genero,nacimiento,email,contrasenaa);
+        control.guardar(id,nombre,apellido,genero,nacimiento,email,contrasenaa);
         
         JOptionPane.showMessageDialog(null, "Tu cuenta ha sido creada exitosamente!");
         

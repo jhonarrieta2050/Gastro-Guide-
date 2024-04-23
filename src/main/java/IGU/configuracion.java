@@ -6,7 +6,7 @@ import Logica.Usuario;
 
 public class configuracion extends javax.swing.JFrame {
         
-    private Inicio inicio;
+    private Perfil perfil;
     public Usuario usuario;
     
     Controlador controlador = new Controlador();
@@ -14,11 +14,12 @@ public class configuracion extends javax.swing.JFrame {
     public configuracion() {
         initComponents();
     }
+    
+    public void setPerfil(Perfil perfil){
+        
+        this.perfil = perfil;
+    }
 
-      public void setInicio(Inicio inicio){
-          
-          this.inicio = inicio;
-      }  
     
     
         
@@ -29,17 +30,13 @@ public class configuracion extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jToggleButton1 = new javax.swing.JToggleButton();
-        jLabel2 = new javax.swing.JLabel();
-        jToggleButton3 = new javax.swing.JToggleButton();
-        contrasenaText = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
-        nombreTextConfig = new javax.swing.JTextField();
-        apellidoTextConfig = new javax.swing.JTextField();
-        generoTextConfig = new javax.swing.JTextField();
-        fechaNacTextConfig = new javax.swing.JTextField();
-        CorreoTextConfig = new javax.swing.JTextField();
-        ContrasenaTextConfig = new javax.swing.JTextField();
+        nombreText = new javax.swing.JTextField();
+        apellidoText = new javax.swing.JTextField();
+        generoText = new javax.swing.JTextField();
+        fechaText = new javax.swing.JTextField();
+        correoText = new javax.swing.JTextField();
+        contrasenaText = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -67,85 +64,58 @@ public class configuracion extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Gastro-Guide");
 
-        jToggleButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jToggleButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jToggleButton1.setForeground(new java.awt.Color(0, 0, 0));
-        jToggleButton1.setText("Inicio");
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+
+        nombreText.setBackground(new java.awt.Color(255, 255, 255));
+        nombreText.setForeground(new java.awt.Color(0, 0, 0));
+        nombreText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        nombreText.setCaretColor(new java.awt.Color(0, 0, 0));
+        nombreText.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        nombreText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
+                nombreTextActionPerformed(evt);
             }
         });
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Usuario\\OneDrive\\Documentos\\NetBeansProjects\\Gastro-Guide\\src\\main\\java\\Imagenes\\back-64.png")); // NOI18N
-        jLabel2.setText("jLabel2");
-
-        jToggleButton3.setText("jToggleButton3");
-        jToggleButton3.addActionListener(new java.awt.event.ActionListener() {
+        apellidoText.setBackground(new java.awt.Color(255, 255, 255));
+        apellidoText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        apellidoText.setDisabledTextColor(new java.awt.Color(255, 255, 255));
+        apellidoText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton3ActionPerformed(evt);
+                apellidoTextActionPerformed(evt);
             }
         });
 
-        contrasenaText.setText("jTextField1");
+        generoText.setBackground(new java.awt.Color(255, 255, 255));
+        generoText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        generoText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                generoTextActionPerformed(evt);
+            }
+        });
+
+        fechaText.setBackground(new java.awt.Color(255, 255, 255));
+        fechaText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        fechaText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fechaTextActionPerformed(evt);
+            }
+        });
+
+        correoText.setBackground(new java.awt.Color(255, 255, 255));
+        correoText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        correoText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                correoTextActionPerformed(evt);
+            }
+        });
+
+        contrasenaText.setBackground(new java.awt.Color(255, 255, 255));
+        contrasenaText.setForeground(new java.awt.Color(255, 255, 255));
+        contrasenaText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         contrasenaText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 contrasenaTextActionPerformed(evt);
-            }
-        });
-
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
-
-        nombreTextConfig.setBackground(new java.awt.Color(255, 255, 255));
-        nombreTextConfig.setForeground(new java.awt.Color(0, 0, 0));
-        nombreTextConfig.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        nombreTextConfig.setCaretColor(new java.awt.Color(0, 0, 0));
-        nombreTextConfig.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        nombreTextConfig.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nombreTextConfigActionPerformed(evt);
-            }
-        });
-
-        apellidoTextConfig.setBackground(new java.awt.Color(255, 255, 255));
-        apellidoTextConfig.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        apellidoTextConfig.setDisabledTextColor(new java.awt.Color(255, 255, 255));
-        apellidoTextConfig.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                apellidoTextConfigActionPerformed(evt);
-            }
-        });
-
-        generoTextConfig.setBackground(new java.awt.Color(255, 255, 255));
-        generoTextConfig.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        generoTextConfig.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                generoTextConfigActionPerformed(evt);
-            }
-        });
-
-        fechaNacTextConfig.setBackground(new java.awt.Color(255, 255, 255));
-        fechaNacTextConfig.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        fechaNacTextConfig.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fechaNacTextConfigActionPerformed(evt);
-            }
-        });
-
-        CorreoTextConfig.setBackground(new java.awt.Color(255, 255, 255));
-        CorreoTextConfig.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        CorreoTextConfig.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CorreoTextConfigActionPerformed(evt);
-            }
-        });
-
-        ContrasenaTextConfig.setBackground(new java.awt.Color(255, 255, 255));
-        ContrasenaTextConfig.setForeground(new java.awt.Color(255, 255, 255));
-        ContrasenaTextConfig.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        ContrasenaTextConfig.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ContrasenaTextConfigActionPerformed(evt);
             }
         });
 
@@ -153,28 +123,28 @@ public class configuracion extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(nombreTextConfig, javax.swing.GroupLayout.DEFAULT_SIZE, 320, Short.MAX_VALUE)
-            .addComponent(apellidoTextConfig)
-            .addComponent(generoTextConfig)
-            .addComponent(fechaNacTextConfig)
-            .addComponent(CorreoTextConfig)
-            .addComponent(ContrasenaTextConfig)
+            .addComponent(nombreText, javax.swing.GroupLayout.DEFAULT_SIZE, 320, Short.MAX_VALUE)
+            .addComponent(apellidoText)
+            .addComponent(generoText)
+            .addComponent(fechaText)
+            .addComponent(correoText)
+            .addComponent(contrasenaText)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(nombreTextConfig, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(nombreText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37)
-                .addComponent(apellidoTextConfig, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(apellidoText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(43, 43, 43)
-                .addComponent(generoTextConfig, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(generoText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38)
-                .addComponent(fechaNacTextConfig, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(fechaText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(43, 43, 43)
-                .addComponent(CorreoTextConfig, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(correoText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
-                .addComponent(ContrasenaTextConfig, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(contrasenaText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40))
         );
 
@@ -247,32 +217,32 @@ public class configuracion extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("Guardar cambios");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setBackground(new java.awt.Color(0, 153, 153));
         jButton2.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
         jButton2.setForeground(new java.awt.Color(0, 0, 0));
         jButton2.setText("Cancelar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(contrasenaText, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jToggleButton3)
-                .addGap(129, 129, 129))
-            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(9, 9, 9)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 210, Short.MAX_VALUE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jToggleButton1)
-                .addGap(139, 139, 139))
+                .addGap(217, 474, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -291,16 +261,6 @@ public class configuracion extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(186, 186, 186)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jToggleButton1)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jToggleButton3)
-                    .addComponent(contrasenaText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(37, 37, 37))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(31, 31, 31)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -336,68 +296,66 @@ public class configuracion extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
-
-       
-        
-        
-
-    }//GEN-LAST:event_jToggleButton3ActionPerformed
-
-    private void nombreTextConfigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreTextConfigActionPerformed
+    private void nombreTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreTextActionPerformed
 
         
 
-    }//GEN-LAST:event_nombreTextConfigActionPerformed
+    }//GEN-LAST:event_nombreTextActionPerformed
 
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+    private void apellidoTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_apellidoTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_apellidoTextActionPerformed
 
-        this.setVisible(false);
+    private void generoTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generoTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_generoTextActionPerformed
 
-        inicio.setVisible(true);
-        inicio.setLocationRelativeTo(null);
-    }//GEN-LAST:event_jToggleButton1ActionPerformed
+    private void fechaTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fechaTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fechaTextActionPerformed
+
+    private void correoTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_correoTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_correoTextActionPerformed
 
     private void contrasenaTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contrasenaTextActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_contrasenaTextActionPerformed
 
-    private void apellidoTextConfigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_apellidoTextConfigActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_apellidoTextConfigActionPerformed
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        
+        this.setVisible(false);
+        
+        perfil.setVisible(true);
+        perfil.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void generoTextConfigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generoTextConfigActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_generoTextConfigActionPerformed
-
-    private void fechaNacTextConfigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fechaNacTextConfigActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_fechaNacTextConfigActionPerformed
-
-    private void CorreoTextConfigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CorreoTextConfigActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CorreoTextConfigActionPerformed
-
-    private void ContrasenaTextConfigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContrasenaTextConfigActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ContrasenaTextConfigActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+      
+        String nombre = nombreText.getText();
+        String apellido = apellidoText.getText();
+        String genero = generoText.getText();
+        String email = correoText.getText();
+        String contrasena = contrasenaText.getText();
+        
+        controlador.cambiarDatos(nombre,apellido,genero,email,contrasena);
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField ContrasenaTextConfig;
-    private javax.swing.JTextField CorreoTextConfig;
-    private javax.swing.JTextField apellidoTextConfig;
+    private javax.swing.JTextField apellidoText;
     private javax.swing.JTextField contrasenaText;
-    private javax.swing.JTextField fechaNacTextConfig;
-    private javax.swing.JTextField generoTextConfig;
+    private javax.swing.JTextField correoText;
+    private javax.swing.JTextField fechaText;
+    private javax.swing.JTextField generoText;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -408,9 +366,7 @@ public class configuracion extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JToggleButton jToggleButton1;
-    private javax.swing.JToggleButton jToggleButton3;
-    private javax.swing.JTextField nombreTextConfig;
+    private javax.swing.JTextField nombreText;
     // End of variables declaration//GEN-END:variables
 
     
