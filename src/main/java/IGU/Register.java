@@ -154,7 +154,7 @@ public class Register extends javax.swing.JFrame {
 
         jLabel9.setFont(new java.awt.Font("Segoe UI Historic", 0, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel9.setText("Fecha de nacimiento (AA/MM/YYYY)");
+        jLabel9.setText("Fecha de nacimiento (DD/MM/YYYY)");
 
         jComboBox1.setBackground(new java.awt.Color(255, 255, 255));
         jComboBox1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -201,7 +201,7 @@ public class Register extends javax.swing.JFrame {
                     .addGroup(ImagenContainerLayout.createSequentialGroup()
                         .addGap(87, 87, 87)
                         .addComponent(jLabel2)))
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
         ImagenContainerLayout.setVerticalGroup(
             ImagenContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

@@ -8,6 +8,8 @@ public class Controlador {
     
      ArrayList<Usuario> baseDatos = new ArrayList<>();
      BaseDatos almacenar = new BaseDatos();
+     private String contrasenaTemporal;
+     private Usuario usuarioPrueba;
         
         public void guardar(String nombre ,String apellido,String genero,Date nacimiento, String email, String contrasena){
             
@@ -71,41 +73,11 @@ public class Controlador {
                  
              }
          
-         public String obtenerDatos(String variable,String contrasena){
-             
-             Usuario usuarioPrueba= new Usuario();
-             
-             ArrayList<Usuario> listaUsuarios = almacenar.obtenerBaseDatos();
-             
-             for(Usuario usuario : listaUsuarios){
-                 
-                 if(usuario.getContrasena().equals(contrasena)){
-                     
-                     usuarioPrueba = usuario;
-                     
-                 }
-                 }
-
-                            if (variable.equals("nombre")) {
-                   return usuarioPrueba.getName();
-               } else if (variable.equals("apellido")) {
-                   return usuarioPrueba.getApellido();
-               } else if (variable.equals("genero")) {
-                   return usuarioPrueba.getGenero();
-               } else if (variable.equals("email")) {
-                   return usuarioPrueba.getCorreo();
-               } else if (variable.equals("contrasena")) {
-                   return usuarioPrueba.getContrasena();
-               } else {
-                   // Manejo de caso cuando la variable no coincide con ningún atributo conocido
-                   return "Atributo no válido";
-               }
-                 
-             }
+        
          
-         public Usuario verificarContrasena(String contrasena){
+         public void verificarContrasena(String contrasena){
              
-              Usuario usuarioPrueba= new Usuario();
+              
              
              ArrayList<Usuario> listaUsuarios = almacenar.obtenerBaseDatos();
              
@@ -113,12 +85,29 @@ public class Controlador {
                  
                  if(usuario.getContrasena().equals(contrasena)){
                      
-                     return usuarioPrueba = usuario;
+                      this.usuarioPrueba = usuario;
                      
                  }
          }
-           return usuarioPrueba;
+           
 }
+         
+         public Usuario getUsuarioPrueba(){
+             return usuarioPrueba;
+         }
+         
+         public void setContrasena(String contrasena){
+             
+             this.contrasenaTemporal = contrasena;
+         }
+         
+         public String getContrasena(){
+             
+             return contrasenaTemporal;
+         }
+         
+         
+         
 }
 
         
