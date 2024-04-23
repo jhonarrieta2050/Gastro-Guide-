@@ -305,12 +305,12 @@
                       <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel15" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
-                          <Component id="jLabel14" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                          <Component id="generoText" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                          <Component id="correoText" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
                           <Component id="nombreText" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
-                          <Component id="jLabel16" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel13" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel18" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="nacimientoText" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="apellidoText" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="contrasenaText" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="102" max="32767" attributes="0"/>
                   </Group>
@@ -325,15 +325,15 @@
                           <Component id="jLabel12" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jLabel13" min="-2" pref="32" max="-2" attributes="0"/>
+                      <Component id="apellidoText" min="-2" pref="32" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                      <Component id="jLabel15" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="generoText" min="-2" pref="30" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                      <Component id="jLabel16" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="nacimientoText" min="-2" pref="34" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                      <Component id="jLabel14" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="correoText" min="-2" pref="34" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                      <Component id="jLabel18" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="contrasenaText" min="-2" pref="34" max="-2" attributes="0"/>
                       <EmptySpace pref="84" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -342,7 +342,7 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel12">
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel13">
+            <Component class="javax.swing.JLabel" name="apellidoText">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI Emoji" size="18" style="1"/>
@@ -353,7 +353,7 @@
                 <Property name="text" type="java.lang.String" value="Apellido"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel14">
+            <Component class="javax.swing.JLabel" name="correoText">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI Emoji" size="18" style="1"/>
@@ -364,7 +364,7 @@
                 <Property name="text" type="java.lang.String" value="Correo"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel15">
+            <Component class="javax.swing.JLabel" name="generoText">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI Emoji" size="18" style="1"/>
@@ -375,7 +375,7 @@
                 <Property name="text" type="java.lang.String" value="Genero"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel16">
+            <Component class="javax.swing.JLabel" name="nacimientoText">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI Emoji" size="18" style="1"/>
@@ -402,7 +402,7 @@
                 <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="nombreTextPropertyChange"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel18">
+            <Component class="javax.swing.JLabel" name="contrasenaText">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI Emoji" size="18" style="1"/>
@@ -410,7 +410,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="0" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Contrasena"/>
+                <Property name="text" type="java.lang.String" value="............."/>
               </Properties>
             </Component>
           </SubComponents>

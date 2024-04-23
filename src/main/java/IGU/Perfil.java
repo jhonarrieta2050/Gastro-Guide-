@@ -2,6 +2,8 @@
 package IGU;
 import Logica.Controlador;
 import Logica.Usuario;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 public class Perfil extends javax.swing.JFrame {
 
     private Inicio inicio;
@@ -26,6 +28,14 @@ public class Perfil extends javax.swing.JFrame {
         UsuarioPrueba = usuario;
         
         nombreText.setText(UsuarioPrueba.getName());
+        apellidoText.setText(UsuarioPrueba.getApellido());
+        generoText.setText(UsuarioPrueba.getGenero());
+        
+        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+        String nacimiento = formato.format(UsuarioPrueba.getNacimiento());
+        nacimientoText.setText(nacimiento);
+        
+        correoText.setText(UsuarioPrueba.getCorreo());
     }
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -44,12 +54,12 @@ public class Perfil extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
+        apellidoText = new javax.swing.JLabel();
+        correoText = new javax.swing.JLabel();
+        generoText = new javax.swing.JLabel();
+        nacimientoText = new javax.swing.JLabel();
         nombreText = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
+        contrasenaText = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jToggleButton1 = new javax.swing.JToggleButton();
@@ -141,21 +151,21 @@ public class Perfil extends javax.swing.JFrame {
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jPanel3.setForeground(new java.awt.Color(51, 51, 51));
 
-        jLabel13.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel13.setText("Apellido");
+        apellidoText.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
+        apellidoText.setForeground(new java.awt.Color(0, 0, 0));
+        apellidoText.setText("Apellido");
 
-        jLabel14.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel14.setText("Correo");
+        correoText.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
+        correoText.setForeground(new java.awt.Color(0, 0, 0));
+        correoText.setText("Correo");
 
-        jLabel15.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel15.setText("Genero");
+        generoText.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
+        generoText.setForeground(new java.awt.Color(0, 0, 0));
+        generoText.setText("Genero");
 
-        jLabel16.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel16.setText("Fecha de nacimiento");
+        nacimientoText.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
+        nacimientoText.setForeground(new java.awt.Color(0, 0, 0));
+        nacimientoText.setText("Fecha de nacimiento");
 
         nombreText.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
         nombreText.setForeground(new java.awt.Color(0, 0, 0));
@@ -182,9 +192,9 @@ public class Perfil extends javax.swing.JFrame {
             }
         });
 
-        jLabel18.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel18.setText("Contrasena");
+        contrasenaText.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
+        contrasenaText.setForeground(new java.awt.Color(0, 0, 0));
+        contrasenaText.setText(".............");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -195,12 +205,12 @@ public class Perfil extends javax.swing.JFrame {
                 .addComponent(jLabel12)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(generoText, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(correoText, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(nombreText, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel16)
-                    .addComponent(jLabel13)
-                    .addComponent(jLabel18))
+                    .addComponent(nacimientoText)
+                    .addComponent(apellidoText)
+                    .addComponent(contrasenaText))
                 .addContainerGap(102, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -211,15 +221,15 @@ public class Perfil extends javax.swing.JFrame {
                     .addComponent(nombreText, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel12))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(apellidoText, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24)
-                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(generoText, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24)
-                .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(nacimientoText, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
-                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(correoText, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
-                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(contrasenaText, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(84, Short.MAX_VALUE))
         );
 
@@ -358,15 +368,14 @@ public class Perfil extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel apellidoText;
+    private javax.swing.JLabel contrasenaText;
+    private javax.swing.JLabel correoText;
+    private javax.swing.JLabel generoText;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -381,6 +390,7 @@ public class Perfil extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JToggleButton jToggleButton2;
+    private javax.swing.JLabel nacimientoText;
     private javax.swing.JLabel nombreText;
     // End of variables declaration//GEN-END:variables
 }
