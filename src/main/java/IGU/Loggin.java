@@ -203,6 +203,7 @@ private Controlador controlador;
             
             inicio.setVisible(true);
             inicio.setLocationRelativeTo(null);
+            inicio.setLoggin(this);
             
             
         }else{
