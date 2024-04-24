@@ -18,6 +18,11 @@ public class BaseDatos {
         
     }
     
+    public void guardarBaseDatos(ArrayList<Usuario> basedatos){
+        this.baseDatos = basedatos;
+        
+    }
+    
     public void recorrer(){
         
         for (Usuario usuario : baseDatos) {

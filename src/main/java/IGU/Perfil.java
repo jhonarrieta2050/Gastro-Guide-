@@ -362,6 +362,7 @@ public class Perfil extends javax.swing.JFrame {
         confi.setVisible(true);
         confi.setLocationRelativeTo(null);
         confi.setPerfil(this);
+        
     }//GEN-LAST:event_jToggleButton2ActionPerformed
 
     private void nombreTextPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_nombreTextPropertyChange

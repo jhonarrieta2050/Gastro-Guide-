@@ -10,6 +10,7 @@ public class Controlador {
      BaseDatos almacenar = new BaseDatos();
      private String contrasenaTemporal;
      private Usuario usuarioPrueba;
+     
         
         public void guardar(int id,String nombre ,String apellido,String genero,Date nacimiento, String email, String contrasena){
             
@@ -74,10 +75,28 @@ public class Controlador {
                  
              }
          
-        public void cambiarDatos(String nombre,String apellido,String genero,String email,String contrasena){
+        public Usuario cambiarDatos(String nombre,String apellido,String genero,String email,String contrasena){
             
+            ArrayList<Usuario> listaUsuarios = almacenar.obtenerBaseDatos();
             
-            
+            for(Usuario usuario : listaUsuarios){
+                 
+                 if(usuarioPrueba.getContrasena().equals(usuario.getContrasena())){
+                      System.out.println("Fecha como String: ");
+                      usuario.setName(nombre);
+                      usuario.setApellido(apellido);
+                      usuario.setGenero(genero);
+                      usuario.setCorreo(email);
+                      usuario.setContrasena(contrasena);
+                      
+                      
+                      
+                      return usuario;
+                      
+                 }
+                 
+         }
+                return usuarioPrueba;
             
         }
          

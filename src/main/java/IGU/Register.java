@@ -92,6 +92,7 @@ public class Register extends javax.swing.JFrame {
         jLabel4.setText("Apellido");
 
         emailText.setBackground(new java.awt.Color(255, 255, 255));
+        emailText.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         emailText.setForeground(new java.awt.Color(0, 0, 0));
         emailText.setText(null);
         emailText.addActionListener(new java.awt.event.ActionListener() {
@@ -250,10 +251,10 @@ public class Register extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(ImagenContainer, javax.swing.GroupLayout.PREFERRED_SIZE, 1001, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -330,12 +331,15 @@ public class Register extends javax.swing.JFrame {
         loggin.setVisible(true);
         this.setVisible(false);
        loggin.setControl(control);
+       
+       System.out.println("Número aleatorio: " + id);
         
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void loginBtmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBtmActionPerformed
             
         loggin.setVisible(true);
+        loggin.setLocationRelativeTo(null);
         this.setVisible(false);
     }//GEN-LAST:event_loginBtmActionPerformed
 
