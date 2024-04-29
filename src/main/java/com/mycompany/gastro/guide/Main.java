@@ -1,6 +1,6 @@
 
 
-package GastroPackage;
+package com.mycompany.gastro.guide;
 
 
 
