@@ -9,7 +9,7 @@ import java.util.Random;
      
 public class Register extends javax.swing.JFrame {
     
-
+ 
     Controlador control = new Controlador();
     
     public Register() {

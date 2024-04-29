@@ -333,8 +333,10 @@ public class configuracion extends javax.swing.JFrame {
         String email = correoText.getText();
         String contrasena = contrasenaText.getText();
         
+        System.out.println(nombre + apellido + genero + email + contrasena);
+        
         Usuario usuario = controlador.cambiarDatos(nombre,apellido,genero,email,contrasena);
-        if(usuario ==null){
+        if(usuario == null){
             System.out.println("Es nulo");
         }
         System.out.println("Número aleatorio: " + usuario.getId());

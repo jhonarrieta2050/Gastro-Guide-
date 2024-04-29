@@ -9,7 +9,8 @@ public class Controlador {
      ArrayList<Usuario> baseDatos = new ArrayList<>();
      BaseDatos almacenar = new BaseDatos();
      private String contrasenaTemporal;
-     private Usuario usuarioPrueba;
+     
+     private static Usuario usuarioPrueba;
      
         
         public void guardar(int id,String nombre ,String apellido,String genero,Date nacimiento, String email, String contrasena){
@@ -76,12 +77,13 @@ public class Controlador {
              }
          
         public Usuario cambiarDatos(String nombre,String apellido,String genero,String email,String contrasena){
-            
+            System.out.println(usuarioPrueba.getContrasena());
             ArrayList<Usuario> listaUsuarios = almacenar.obtenerBaseDatos();
             
             for(Usuario usuario : listaUsuarios){
                  
                  if(usuarioPrueba.getContrasena().equals(usuario.getContrasena())){
+                     
                       System.out.println("Fecha como String: ");
                       usuario.setName(nombre);
                       usuario.setApellido(apellido);
@@ -102,15 +104,16 @@ public class Controlador {
          
          public void verificarContrasena(String contrasena){
              
-              
+              System.out.println("HOLA");
              
              ArrayList<Usuario> listaUsuarios = almacenar.obtenerBaseDatos();
              
              for(Usuario usuario : listaUsuarios){
-                 
+                
                  if(usuario.getContrasena().equals(contrasena)){
-                     
+                     System.out.println("FUNCIONO");
                       this.usuarioPrueba = usuario;
+                      
                      
                  }
          }
