@@ -235,7 +235,7 @@ public class Inicio extends javax.swing.JFrame {
             perfil.setInicio(this);
             
             perfil.setControlador(control);
-            perfil.colocarDatos(control.getUsuarioPrueba());
+            perfil.colocarDatos(control.getUsuarioActual());
             
     }//GEN-LAST:event_jButton1ActionPerformed
 

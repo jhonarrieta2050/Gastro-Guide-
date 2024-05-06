@@ -6,11 +6,10 @@ import java.util.Date;
 import javax.swing.JTextField;
 public class Controlador {
     
-     ArrayList<Usuario> baseDatos = new ArrayList<>();
-     BaseDatos almacenar = new BaseDatos();
-     private String contrasenaTemporal;
+    
+     BaseDatos baseDatos = new BaseDatos();
      
-     private static Usuario usuarioPrueba;
+     private static Usuario usuarioActual;
      
         
         public void guardar(int id,String nombre ,String apellido,String genero,Date nacimiento, String email, String contrasena){
@@ -28,14 +27,14 @@ public class Controlador {
                usuario.setCorreo(email);
                usuario.setContrasena(contrasena);
               
-               almacenar.almacenar(usuario);
+               baseDatos.almacenar(usuario);
                
             
         }
         
         public boolean pass(String email, String password){
             
-            ArrayList<Usuario> listaUsuarios = almacenar.obtenerBaseDatos();
+            ArrayList<Usuario> listaUsuarios = baseDatos.obtenerBaseDatos();
             
               for (Usuario usuario : listaUsuarios) {
                   
@@ -46,21 +45,7 @@ public class Controlador {
             }
                 return false;
         }
-        
-        public void recorrer(){
-            
-            ArrayList<Usuario> listaUsuarios = almacenar.obtenerBaseDatos();
-             for (Usuario usuario : listaUsuarios){
-                 
-                 System.out.println(usuario.getCorreo());
-                 System.out.println(usuario.getGenero());
-                 System.out.println(usuario.getNacimiento());
-                
-             }
-             
-             
-            
-        }
+
         
          public boolean estanVacio(String... campos){
                  
@@ -77,61 +62,60 @@ public class Controlador {
              }
          
         public Usuario cambiarDatos(String nombre,String apellido,String genero,String email,String contrasena){
-            System.out.println(usuarioPrueba.getContrasena());
-            ArrayList<Usuario> listaUsuarios = almacenar.obtenerBaseDatos();
             
-            for(Usuario usuario : listaUsuarios){
+            ArrayList<Usuario> listaUsuariosCambio = baseDatos.obtenerBaseDatos();
+            
+            if (listaUsuariosCambio.isEmpty()) {
+    System.out.println("La lista de usuarios está vacía");
+} else {
+    // Itera sobre la lista de usuarios
+    for (Usuario usuario : listaUsuariosCambio) {
+        // Realiza las operaciones que necesites con cada usuario
+        System.out.println("Nombre: " + usuario.getName());
+        System.out.println("Apellido: " + usuario.getApellido());
+    }
+}
+            
+            
+            for(Usuario usuario : listaUsuariosCambio){
                  
-                 if(usuarioPrueba.getContrasena().equals(usuario.getContrasena())){
+                System.out.println(usuario.getName() + "nombre---");
+                System.out.println(usuario.getContrasena() + " contrasena");
+                
+                 if(usuarioActual.getContrasena().equals(usuario.getContrasena())){
                      
-                      System.out.println("Fecha como String: ");
+                      System.out.println("PASO ");
                       usuario.setName(nombre);
                       usuario.setApellido(apellido);
                       usuario.setGenero(genero);
                       usuario.setCorreo(email);
                       usuario.setContrasena(contrasena);
                       
-                      
-                      
                       return usuario;
                       
                  }
-                 
          }
-                return usuarioPrueba;
+            System.out.println("no paso");
+                return usuarioActual;
             
         }
          
          public void verificarContrasena(String contrasena){
              
-              System.out.println("HOLA");
-             
-             ArrayList<Usuario> listaUsuarios = almacenar.obtenerBaseDatos();
+             ArrayList<Usuario> listaUsuarios = baseDatos.obtenerBaseDatos();
              
              for(Usuario usuario : listaUsuarios){
                 
                  if(usuario.getContrasena().equals(contrasena)){
                      System.out.println("FUNCIONO");
-                      this.usuarioPrueba = usuario;
-                      
-                     
+                    Controlador.usuarioActual = usuario; 
                  }
          }
            
 }
          
-         public Usuario getUsuarioPrueba(){
-             return usuarioPrueba;
-         }
-         
-         public void setContrasena(String contrasena){
-             
-             this.contrasenaTemporal = contrasena;
-         }
-         
-         public String getContrasena(){
-             
-             return contrasenaTemporal;
+         public Usuario getUsuarioActual(){
+             return usuarioActual;
          }
          
          

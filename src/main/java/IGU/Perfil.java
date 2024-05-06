@@ -359,9 +359,10 @@ public class Perfil extends javax.swing.JFrame {
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
-            
+        
         this.setVisible(false);
         
+        confi.setControlador(control);
         confi.setVisible(true);
         confi.setLocationRelativeTo(null);
         confi.setPerfil(this);

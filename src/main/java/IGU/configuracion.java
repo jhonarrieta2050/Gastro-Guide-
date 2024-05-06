@@ -20,6 +20,11 @@ public class configuracion extends javax.swing.JFrame {
         this.perfil = perfil;
     }
     
+    public void setControlador(Controlador control){
+        
+        this.controlador = control;
+    }
+    
 
     
     
@@ -333,7 +338,7 @@ public class configuracion extends javax.swing.JFrame {
         String email = correoText.getText();
         String contrasena = contrasenaText.getText();
         
-        System.out.println(nombre + apellido + genero + email + contrasena);
+        
         
         Usuario usuario = controlador.cambiarDatos(nombre,apellido,genero,email,contrasena);
         if(usuario == null){

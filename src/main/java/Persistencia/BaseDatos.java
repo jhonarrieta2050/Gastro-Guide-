@@ -14,6 +14,12 @@ public class BaseDatos {
     
     public ArrayList<Usuario> obtenerBaseDatos(){
         
+         for (Usuario usuario : baseDatos) {
+  
+        System.out.println("Nombre: " + usuario.getName());
+             System.out.println("apellido" + usuario.getApellido());
+         }
+        
         return baseDatos;
         
     }
