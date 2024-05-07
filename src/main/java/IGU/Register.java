@@ -2,6 +2,7 @@
 package IGU;
 import javax.swing.JOptionPane;
 import Logica.Controlador;
+import Logica.errores;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.text.ParseException;
@@ -172,30 +173,28 @@ public class Register extends javax.swing.JFrame {
                 .addGroup(ImagenContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ImagenContainerLayout.createSequentialGroup()
                         .addGap(27, 27, 27)
-                        .addGroup(ImagenContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(ImagenContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(ImagenContainerLayout.createSequentialGroup()
                                 .addGap(263, 263, 263)
                                 .addGroup(ImagenContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(apellidoText, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(ImagenContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(loginBtm, javax.swing.GroupLayout.PREFERRED_SIZE, 532, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(nameText, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(ImagenContainerLayout.createSequentialGroup()
                                 .addGroup(ImagenContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(nameText, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(ImagenContainerLayout.createSequentialGroup()
-                                        .addGroup(ImagenContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(emailText, javax.swing.GroupLayout.DEFAULT_SIZE, 243, Short.MAX_VALUE)
-                                            .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                        .addGap(18, 18, 18)
-                                        .addGroup(ImagenContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(ageText)
-                                            .addComponent(passwordText)
-                                            .addComponent(jLabel9)
-                                            .addComponent(jLabel6)))
-                                    .addComponent(jToggleButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(emailText, javax.swing.GroupLayout.DEFAULT_SIZE, 243, Short.MAX_VALUE)
+                                    .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addGroup(ImagenContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(ageText)
+                                    .addComponent(passwordText)
+                                    .addComponent(jLabel9)
+                                    .addComponent(jLabel6)))
+                            .addComponent(jToggleButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(loginBtm, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(ImagenContainerLayout.createSequentialGroup()
                         .addGap(277, 277, 277)
                         .addComponent(jLabel7))
@@ -298,6 +297,21 @@ public class Register extends javax.swing.JFrame {
         String genero = (String)jComboBox1.getSelectedItem();
         String apellido = apellidoText.getText();
         
+        errores Errores = control.validacionDatos(nombre,email,contrasenaa,genero,apellido);
+        
+        if(Errores.getPass()){
+            
+            JOptionPane.showMessageDialog(this, Errores.getErrorName(), "Error", JOptionPane.ERROR_MESSAGE);
+            
+            return;
+            
+        }
+        
+        
+           
+        
+        
+        
         String fechaa = ageText.getText();
         
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
@@ -332,7 +346,12 @@ public class Register extends javax.swing.JFrame {
         this.setVisible(false);
        loggin.setControl(control);
        
-       System.out.println("Número aleatorio: " + id);
+       
+        nameText.setText("");
+        emailText.setText("");
+        passwordText.setText("");
+        apellidoText.setText("");
+        ageText.setText("");
         
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
@@ -341,6 +360,11 @@ public class Register extends javax.swing.JFrame {
         loggin.setVisible(true);
         loggin.setLocationRelativeTo(null);
         this.setVisible(false);
+        nameText.setText("");
+        emailText.setText("");
+        passwordText.setText("");
+        apellidoText.setText("");
+        ageText.setText("");
     }//GEN-LAST:event_loginBtmActionPerformed
 
     private void emailTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailTextActionPerformed

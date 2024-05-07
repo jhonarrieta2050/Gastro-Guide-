@@ -3,6 +3,7 @@ package Logica;
 import java.util.ArrayList;
 import Persistencia.BaseDatos;
 import java.util.Date;
+import java.util.HashSet;
 import javax.swing.JTextField;
 public class Controlador {
     
@@ -65,24 +66,10 @@ public class Controlador {
             
             ArrayList<Usuario> listaUsuariosCambio = baseDatos.obtenerBaseDatos();
             
-            if (listaUsuariosCambio.isEmpty()) {
-    System.out.println("La lista de usuarios está vacía");
-} else {
-    // Itera sobre la lista de usuarios
-    for (Usuario usuario : listaUsuariosCambio) {
-        // Realiza las operaciones que necesites con cada usuario
-        System.out.println("Nombre: " + usuario.getName());
-        System.out.println("Apellido: " + usuario.getApellido());
-    }
-}
-            
             
             for(Usuario usuario : listaUsuariosCambio){
-                 
-                System.out.println(usuario.getName() + "nombre---");
-                System.out.println(usuario.getContrasena() + " contrasena");
                 
-                 if(usuarioActual.getContrasena().equals(usuario.getContrasena())){
+                 if(usuarioActual.getId() == usuario.getId()){
                      
                       System.out.println("PASO ");
                       usuario.setName(nombre);
@@ -90,6 +77,8 @@ public class Controlador {
                       usuario.setGenero(genero);
                       usuario.setCorreo(email);
                       usuario.setContrasena(contrasena);
+                      
+                      baseDatos.guardarBaseDatos(listaUsuariosCambio);
                       
                       return usuario;
                       
@@ -117,9 +106,51 @@ public class Controlador {
          public Usuario getUsuarioActual(){
              return usuarioActual;
          }
+
+    public errores validacionDatos(String nombre, String email, String contrasenaa, String genero, String apellido) {
+        
+        errores Error = new errores();
+        
+        if(nombre.isEmpty() || 3 > nombre.length()){
+            
+            Error.setErrorName("Se requieren minimo 3 caracteres en el nombre");
+            Error.setPass(true);
+            return Error;
+            
+    }else if(apellido.isEmpty() || 3 > apellido.length()){
+        
+        Error.setErrorName("Se requieren minimo 3 caracteres en el apellido");
+        Error.setPass(true);
+        return Error;
+        
+    }else if( genero.isEmpty()){
+        
+        Error.setErrorName("Eliga una opcion en el genero");
+        Error.setPass(true);
+        
+    }else if(!email.matches("[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}")){
+        
+        Error.setErrorName("Correo electronico incorrecto, escriba uno con patron correcto");
+        Error.setPass(true);
+        return Error;
+        
+    }else if(contrasenaa.isEmpty() || 4 > contrasenaa.length() ){
+        
+        Error.setErrorName("La contrasena debe contener minimo 4 caractares ");
+        Error.setPass(true);
+        return Error;
+    }
+        
+        
          
+         Error.setErrorName(null);
+         Error.setPass(false);
          
+         return Error;
          
+}
+
+    
 }
 
         
