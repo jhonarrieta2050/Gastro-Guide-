@@ -286,9 +286,7 @@ public class Register extends javax.swing.JFrame {
     }//GEN-LAST:event_apellidoTextActionPerformed
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-            
-        
-        
+          
         int id = new Random().nextInt();
         String nombre = nameText.getText();
         String email = emailText.getText();
@@ -296,47 +294,33 @@ public class Register extends javax.swing.JFrame {
         String contrasenaa = new String(contrasena);
         String genero = (String)jComboBox1.getSelectedItem();
         String apellido = apellidoText.getText();
-        
-        errores Errores = control.validacionDatos(nombre,email,contrasenaa,genero,apellido);
-        
-        if(Errores.getPass()){
-            
-            JOptionPane.showMessageDialog(this, Errores.getErrorName(), "Error", JOptionPane.ERROR_MESSAGE);
-            
-            return;
-            
-        }
-        
-        
-           
-        
-        
-        
         String fechaa = ageText.getText();
-        
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        Date nacimiento = null;
-        try {
-               
-                 nacimiento = dateFormat.parse(fechaa);
-               
-            } catch (ParseException ex) {
-                if(nacimiento == null){
-                    JOptionPane.showMessageDialog(this, "Escriba una fecha", "Error", JOptionPane.ERROR_MESSAGE);
-                }else{
-                JOptionPane.showMessageDialog(this, "Formato de fecha incorrecto", "Error", JOptionPane.ERROR_MESSAGE);
-               
-                }
-                return;
+         
+        errores errorFecha = control.validarFecha(fechaa);
+        errores Errores = control.validacionDatos(nombre,email,contrasenaa,genero,apellido);
+  
+        if(Errores.getPass()){
+            String[] errores = Errores.getErrorName();
+            
+            for (String errore : errores) {
+                JOptionPane.showMessageDialog(this, errore, "Error", JOptionPane.ERROR_MESSAGE);
             }
             
-       
+            return; 
+        }
+        
+        if(errorFecha.getPass()){
+            String[] error = errorFecha.getErrorName();
+            JOptionPane.showMessageDialog(this, error[0], "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+            
+           Date nacimiento = errorFecha.getFecha();
+        
        if(control.estanVacio(nombre,email,contrasenaa,genero,apellido)){
            JOptionPane.showMessageDialog(null, "Faltan algunos campos por llenar");
            return;
        }
-        
-        
         
         control.guardar(id,nombre,apellido,genero,nacimiento,email,contrasenaa);
         
@@ -344,7 +328,7 @@ public class Register extends javax.swing.JFrame {
         
         loggin.setVisible(true);
         this.setVisible(false);
-       loggin.setControl(control);
+        loggin.setControl(control);
        
        
         nameText.setText("");

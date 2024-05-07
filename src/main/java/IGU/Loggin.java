@@ -209,6 +209,9 @@ private Controlador controlador;
             controlador.verificarContrasena(password);
             inicio.setControlador(controlador);
             
+            emailText.setText("");
+            passwordText.setText("");
+            
             
         }else{
             

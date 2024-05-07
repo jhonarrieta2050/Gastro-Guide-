@@ -4,6 +4,7 @@ import Logica.Controlador;
 import Logica.Usuario;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import javax.swing.JOptionPane;
 public class Perfil extends javax.swing.JFrame {
     configuracion confi = new configuracion();
     
@@ -360,8 +361,16 @@ public class Perfil extends javax.swing.JFrame {
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
         
-        this.setVisible(false);
+        String mensaje = JOptionPane.showInputDialog(null, "Escriba su contrasena:", "Confirmar contrasena", JOptionPane.PLAIN_MESSAGE);
         
+        if(control.verificarContrasenaAcesso(mensaje)){
+            
+            JOptionPane.showMessageDialog(null, "Contrasena incorrecta");
+            return;
+        }
+        
+        this.setVisible(false);
+            
         confi.setControlador(control);
         confi.setVisible(true);
         confi.setLocationRelativeTo(null);
@@ -378,7 +387,7 @@ public class Perfil extends javax.swing.JFrame {
     }//GEN-LAST:event_nombreTextAncestorMoved
 
     private void nombreTextInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_nombreTextInputMethodTextChanged
-       nombreText.setText("Macaco");
+       
     }//GEN-LAST:event_nombreTextInputMethodTextChanged
 
 
