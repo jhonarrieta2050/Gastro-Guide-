@@ -1,15 +1,16 @@
 package co.edu.unicolombo.pb.proula.gui.logica;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Usuario {
-    private int id;
-    private String name;
-    private String apellido;
-    private String genero;
-    private String correo;
-    private String contrasena;
-    private Date nacimiento;
+public class Usuario implements Serializable{
+    public static int id;
+    public static String name;
+    public static String apellido;
+    public static String genero;
+    public static String correo;
+    public static String contrasena;
+    public static Date nacimiento;
     
     
     public Usuario() {
