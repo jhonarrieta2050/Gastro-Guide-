@@ -40,10 +40,12 @@ public class BaseDatos implements Serializable{
     }
     
     public void recorrer(){
-        
-        for (Usuario usuario : baseDatos) {
-                  
-                  
+        try {
+            baseDatos = (ArrayList<Usuario>) GestionDatos.recuperar("datos");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        for (Usuario usuario : baseDatos) {                  
                   System.out.println("Nombre: " + usuario.getContrasena()+ ", Correo: " + usuario.getCorreo());
             }
     }
