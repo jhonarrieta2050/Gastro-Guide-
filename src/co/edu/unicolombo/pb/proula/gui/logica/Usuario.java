@@ -1,5 +1,6 @@
 package co.edu.unicolombo.pb.proula.gui.logica;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Usuario {
@@ -10,9 +11,12 @@ public class Usuario {
     private String correo;
     private String contrasena;
     private Date nacimiento;
+    private ArrayList<Recetas> recetas = new ArrayList();
     
     
     public Usuario() {
+        
+        
     }
     
     public int getId(){
@@ -70,5 +74,22 @@ public class Usuario {
 
     public void setNacimiento(Date nacimiento) {
         this.nacimiento = nacimiento;
+    }
+    
+    public void setReceta(Recetas receta){
+        
+        recetas.add(receta);
+        
+    }
+    
+    public ArrayList<Recetas> getRecetas(){
+        
+        return recetas;
+        
+    }
+    
+    public void actualizarRecetas(ArrayList<Recetas> recetas){
+        this.recetas = recetas;
+        
     }
 }

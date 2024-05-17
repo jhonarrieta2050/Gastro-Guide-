@@ -6,6 +6,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 public class Controlador {
@@ -251,6 +253,188 @@ public class Controlador {
          return false;
     }
     
+    public void guardarReceta(String titulo, String descripcion,String ingredientes,String etiquetas,String pasos){
+        
+       int cantidadRecetas = contarRecetas();
+        
+        
+        ArrayList<Usuario> listaUsuarios = baseDatos.obtenerBaseDatos();
+        Recetas receta = new Recetas();
+        
+        receta.setTitulo(titulo);
+        receta.setDescripcion(descripcion);
+        receta.setId(cantidadRecetas);
+        
+        receta.setIngredientes(separadorComas(ingredientes));
+        receta.setEtiquetas(separadorComas(etiquetas));
+        receta.setPasos(separadorPasos(pasos));
+        
+       
+        for(Usuario usuario : listaUsuarios){
+                
+                 if(usuarioActual.getId() == usuario.getId()){
+                     usuario.setReceta(receta);
+                     baseDatos.guardarBaseDatos(listaUsuarios); 
+                 }
+                 
+         }
+        actualizarUsuarioActual();
+    }
+    
+    public errores validarRecetas(String titulo, String descripcion,String ingredientes,String etiquetas,String pasos){
+         errores Error = new errores();
+        ArrayList<String> ErrorList = new ArrayList<>();
+        
+         if (titulo.isEmpty() || titulo.length() < 2) {
+            ErrorList.add("Se requieren mínimo 2 caracteres en el titulo");
+        } 
+
+        if (descripcion.isEmpty() || descripcion.length() < 10) {
+        ErrorList.add("Se requieren mínimo 10 caracteres en la descripcion");
+    } 
+        
+    if (ingredientes.isEmpty()) {
+        ErrorList.add("Debe haber minimo un ingrediente");
+    }
+
+    if (etiquetas.isEmpty()) {
+        ErrorList.add("Debe haber minimo una etiqueta");
+    }
+
+    if (pasos.isEmpty() || !pasos.matches("\\d+\\..*?") ) {
+        ErrorList.add("debe haber pasos en la receta");
+    }
+        
+        if (!ErrorList.isEmpty()) {
+        Error.setPass(true);
+        String[] errores = ErrorList.toArray(String[]::new);
+        Error.setErrorName(errores);
+    } else {
+        Error.setPass(false); // No hay errores, por lo tanto, no establecemos la bandera en true
+    }
+
+    return Error;
+    }
+
+    public ArrayList<String> separadorComas(String texto) {
+        
+        ArrayList<String> array = new ArrayList();
+        
+        StringBuilder palabra = new StringBuilder();
+        
+        for(int i = 0; i< texto.length(); i ++){
+            
+            char caracter = texto.charAt(i);
+            
+            if(caracter != ',' ){
+                palabra.append(caracter);
+            }else{
+                array.add(palabra.toString());
+                palabra = new StringBuilder();
+            }
+        }
+            if(palabra.length() > 0){
+                array.add(palabra.toString());
+             }
+        
+        return array;
+        
+    }
+    
+    public ArrayList<String> separadorPasos(String pasos){
+        
+        ArrayList<String> array = new ArrayList<>();
+     
+        Pattern expresionRegular = Pattern.compile("\\d+\\..*?(?=\\d+\\.|$)");
+        Matcher findIndex = expresionRegular.matcher(pasos);
+
+        while (findIndex.find()) {
+            array.add(findIndex.group().trim());
+        }
+
+        return array;
+    }
+    
+    public void actualizarUsuarioActual(){
+        ArrayList<Usuario> listaUsuarios = baseDatos.obtenerBaseDatos();
+        
+        for(Usuario usuario : listaUsuarios){
+                
+                 if(usuarioActual.getId() == usuario.getId()){
+                     
+                     Controlador.usuarioActual = usuario;
+                 }
+         }
+    }
+    
+    public int contarRecetas(){
+        
+        int i = usuarioActual.getRecetas().size() + 1;
+        
+        return i;
+    }
+
+    public void editarReceta(String titulo, String descripcion,String ingredientes, String etiquetas, String pasos,int Id) {
+       
+         ArrayList<Usuario> listaUsuarios = baseDatos.obtenerBaseDatos();
+            
+         ArrayList<Recetas> recetas = usuarioActual.getRecetas();
+         
+         for(Recetas receta : recetas){
+             
+                if(receta.getId() == Id){
+                 
+                 if(titulo.isEmpty()){
+                    titulo = receta.getTitulo();
+                }
+                 
+                 if(descripcion.isEmpty()){
+                    descripcion = receta.getDescripcion();
+                }
+                 if(ingredientes.isEmpty()){
+                    ingredientes = receta.ingredientes();
+                }
+                 if(etiquetas.isEmpty()){
+                    etiquetas = receta.etiquetas();
+                }
+                 if(pasos.isEmpty()){
+                    pasos = receta.pasos();
+                }
+                 
+                receta.setTitulo(titulo);
+                receta.setDescripcion(descripcion);
+                receta.setIngredientes(separadorComas(ingredientes));
+                receta.setEtiquetas(separadorComas(etiquetas));
+                receta.setPasos(separadorPasos(pasos));
+                
+                usuarioActual.actualizarRecetas(recetas);
+                
+                 for(int i = 0; i < listaUsuarios.size(); i++) {
+                     if(listaUsuarios.get(i).getId() == usuarioActual.getId()){
+                         listaUsuarios.set(i, usuarioActual);
+                         baseDatos.guardarBaseDatos(listaUsuarios);
+                         actualizarUsuarioActual();
+                         return;
+                 }
+                }
+                
+             }
+         } 
+    }
+    
+    public Recetas regresarReceta(int id){
+        
+        ArrayList<Recetas> recetas = usuarioActual.getRecetas();
+        
+        for(Recetas receta: recetas){
+            
+            if(receta.getId() == id){
+                return receta;
+            }
+        }
+        
+         throw new IllegalArgumentException("La contrasenas ingresadas no concuerdan, intentelo nuevamente");
+    }
     
 }
 

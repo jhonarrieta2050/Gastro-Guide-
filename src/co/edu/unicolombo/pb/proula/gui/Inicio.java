@@ -10,6 +10,7 @@ import co.edu.unicolombo.pb.proula.gui.logica.Controlador;
 public class Inicio extends javax.swing.JFrame {
 
     Perfil perfil = new Perfil();
+    Recipes recipe = new Recipes();
     public Inicio() {
         initComponents();
     }
@@ -54,6 +55,11 @@ public class Inicio extends javax.swing.JFrame {
         jButton2.setBackground(new java.awt.Color(0, 153, 153));
         jButton2.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
         jButton2.setText("Crear");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton1.setBackground(new java.awt.Color(0, 153, 153));
         jButton1.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
@@ -226,6 +232,15 @@ public class Inicio extends javax.swing.JFrame {
             perfil.colocarDatos(control.getUsuarioActual());
             
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        
+        this.setVisible(false);
+        recipe.setVisible(true);
+        recipe.setLocationRelativeTo(null);
+        recipe.setControl(control);
+        recipe.setInicio(this);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     
 
