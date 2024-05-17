@@ -8,9 +8,10 @@ public class Loggin extends javax.swing.JFrame {
     
     Register registro = new Register();
     Inicio inicio = new Inicio();
+    ForgotPassword fP = new ForgotPassword();
 
 
-    private Controlador controlador;
+    private Controlador controlador = new Controlador();
 
 
     public Loggin() {
@@ -228,6 +229,8 @@ public class Loggin extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
+        fP.setVisible(true);
+        fP.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
 
 
