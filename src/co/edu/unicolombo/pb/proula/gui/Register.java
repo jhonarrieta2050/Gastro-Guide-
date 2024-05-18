@@ -3,15 +3,17 @@ package co.edu.unicolombo.pb.proula.gui;
 import javax.swing.JOptionPane;
 import co.edu.unicolombo.pb.proula.gui.logica.Controlador;
 import co.edu.unicolombo.pb.proula.gui.logica.errores;
-import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.text.ParseException;
 import java.util.Random;
      
 public class Register extends javax.swing.JFrame {
     
  
-    Controlador control = new Controlador();
+    private Controlador control;
+
+    public void setControl(Controlador control) {
+        this.control = control;
+    }
     
     public Register() {
         initComponents();
@@ -172,14 +174,16 @@ public class Register extends javax.swing.JFrame {
                                     .addComponent(passwordText)
                                     .addComponent(jLabel9)
                                     .addComponent(jLabel6)))
-                            .addComponent(jToggleButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(loginBtm, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(ImagenContainerLayout.createSequentialGroup()
                         .addGap(277, 277, 277)
                         .addComponent(jLabel7))
                     .addGroup(ImagenContainerLayout.createSequentialGroup()
                         .addGap(87, 87, 87)
-                        .addComponent(jLabel2)))
+                        .addComponent(jLabel2))
+                    .addGroup(ImagenContainerLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 550, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(27, Short.MAX_VALUE))
         );
         ImagenContainerLayout.setVerticalGroup(
@@ -213,9 +217,9 @@ public class Register extends javax.swing.JFrame {
                         .addGroup(ImagenContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(emailText, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(passwordText, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(48, 48, 48)
+                        .addGap(60, 60, 60)
                         .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel7)
                         .addGap(18, 18, 18)
                         .addComponent(loginBtm, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -307,9 +311,7 @@ public class Register extends javax.swing.JFrame {
         
         loggin.setVisible(true);
         this.setVisible(false);
-        loggin.setControl(control);
-       
-       
+        
         nameText.setText("");
         emailText.setText("");
         passwordText.setText("");

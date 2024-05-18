@@ -310,7 +310,35 @@ public class Controlador {
         String[] errores = ErrorList.toArray(String[]::new);
         Error.setErrorName(errores);
     } else {
-        Error.setPass(false); // No hay errores, por lo tanto, no establecemos la bandera en true
+        Error.setPass(false); 
+    }
+
+    return Error;
+    }
+    
+    public errores editarRecetasValidacion(String titulo, String descripcion,String ingredientes,String etiquetas,String pasos){
+        errores Error = new errores();
+        ArrayList<String> ErrorList = new ArrayList<>();
+        
+         if (!titulo.isEmpty() && titulo.length() < 2) {
+            ErrorList.add("Se requieren mínimo 2 caracteres en el titulo");
+        } 
+
+        if (!descripcion.isEmpty() && descripcion.length() < 10) {
+        ErrorList.add("Se requieren mínimo 10 caracteres en la descripcion");
+    } 
+        
+
+    if (!pasos.isEmpty() && !pasos.matches("\\d+\\..*?") && pasos.length() < 4) {
+        ErrorList.add("debe haber pasos en la receta");
+    }
+        
+        if (!ErrorList.isEmpty()) {
+        Error.setPass(true);
+        String[] errores = ErrorList.toArray(String[]::new);
+        Error.setErrorName(errores);
+    } else {
+        Error.setPass(false);
     }
 
     return Error;

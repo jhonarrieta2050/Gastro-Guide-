@@ -45,17 +45,13 @@ public class ControladorRenderizador {
         
         Random random = new Random();
         int numeroAleatorio = random.nextInt(5) + 1;
-        if(numeroAleatorio == 1){
-            panelSuperior.add(new JLabel(new ImageIcon(getClass().getResource("/co/edu/unicolombo/pb/proula/gui/images/icons8-cook-85.png"))));
-        }else if(numeroAleatorio == 2){
-            panelSuperior.add(new JLabel(new ImageIcon(getClass().getResource("/co/edu/unicolombo/pb/proula/gui/images/icons8-cookbook-64.png"))));
-        }else if(numeroAleatorio == 3){
-            panelSuperior.add(new JLabel(new ImageIcon(getClass().getResource("/co/edu/unicolombo/pb/proula/gui/images/icons8-cook-48.png"))));
-        }else if(numeroAleatorio == 4){
-           panelSuperior.add(new JLabel(new ImageIcon(getClass().getResource("/co/edu/unicolombo/pb/proula/gui/images/yogurt.png"))));
-        }else{
-           panelSuperior.add(new JLabel(new ImageIcon(getClass().getResource("/co/edu/unicolombo/pb/proula/gui/images/carne.png"))));
-        }
+            switch (numeroAleatorio) {
+                case 1 -> panelSuperior.add(new JLabel(new ImageIcon(getClass().getResource("/co/edu/unicolombo/pb/proula/gui/images/icons8-cook-85.png"))));
+                case 2 -> panelSuperior.add(new JLabel(new ImageIcon(getClass().getResource("/co/edu/unicolombo/pb/proula/gui/images/icons8-cookbook-64.png"))));
+                case 3 -> panelSuperior.add(new JLabel(new ImageIcon(getClass().getResource("/co/edu/unicolombo/pb/proula/gui/images/icons8-cook-48.png"))));
+                case 4 -> panelSuperior.add(new JLabel(new ImageIcon(getClass().getResource("/co/edu/unicolombo/pb/proula/gui/images/yogurt.png"))));
+                default -> panelSuperior.add(new JLabel(new ImageIcon(getClass().getResource("/co/edu/unicolombo/pb/proula/gui/images/carne.png"))));
+            }
         
         
         JPanel panelCentral = new JPanel();
