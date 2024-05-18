@@ -36,6 +36,7 @@ public class PasswordRecover extends javax.swing.JFrame {
         nombreField = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        btnCancelarCambiarContraseñaLoggin = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
         contrasenaText = new javax.swing.JTextField();
@@ -44,43 +45,51 @@ public class PasswordRecover extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(199, 252, 199));
         jPanel2.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel2.setPreferredSize(new java.awt.Dimension(280, 188));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-        jLabel1.setText("Olvido su contrasena?");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, -1, -1));
-        jPanel2.add(nombreField, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 125, 120, -1));
+        jLabel1.setText("Recupere su cuenta!!!");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, -1, -1));
+        jPanel2.add(nombreField, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, 130, -1));
 
-        jLabel2.setText("Usuario");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 103, -1, -1));
+        jLabel2.setText("Solo ingresando su nombre");
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 80, -1, -1));
 
+        jButton1.setBackground(new java.awt.Color(17, 132, 17));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Confirmar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 165, -1, -1));
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(124, 170, 100, 30));
 
-        tabbedPane.addTab("tab1", jPanel2);
+        btnCancelarCambiarContraseñaLoggin.setBackground(new java.awt.Color(0, 249, 124));
+        btnCancelarCambiarContraseñaLoggin.setText("Cancelar");
+        jPanel2.add(btnCancelarCambiarContraseñaLoggin, new org.netbeans.lib.awtextra.AbsoluteConstraints(134, 220, -1, -1));
 
-        jPanel3.setBackground(new java.awt.Color(0, 204, 204));
+        tabbedPane.addTab("", jPanel2);
 
-        jButton2.setText("tab1");
+        jPanel3.setBackground(new java.awt.Color(199, 252, 199));
+
+        jButton2.setBackground(new java.awt.Color(17, 132, 17));
+        jButton2.setText("Confirmar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
 
-        contrasenaText.setText("Contrasena");
+        contrasenaText.setText("Nueva contraseña");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         jLabel3.setText("Cambiar contrasena");
 
-        contrasenaTextP.setText("jPasswordField1");
+        contrasenaTextP.setText("hhhhhhhhhhhhhhhhhhh");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -89,47 +98,45 @@ public class PasswordRecover extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(49, 49, 49)
+                        .addGap(92, 92, 92)
+                        .addComponent(jLabel3))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(102, 102, 102)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(contrasenaText)
-                            .addComponent(jButton2)
-                            .addComponent(contrasenaTextP, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)))
+                            .addComponent(contrasenaTextP, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(150, 150, 150)
-                        .addComponent(jLabel3)))
-                .addContainerGap(202, Short.MAX_VALUE))
+                        .addGap(139, 139, 139)
+                        .addComponent(jButton2)))
+                .addContainerGap(110, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGap(77, 77, 77)
+                .addGap(21, 21, 21)
                 .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 214, Short.MAX_VALUE)
+                .addGap(28, 28, 28)
                 .addComponent(contrasenaText, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(contrasenaTextP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(67, 67, 67)
+                .addGap(31, 31, 31)
                 .addComponent(jButton2)
-                .addGap(56, 56, 56))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
 
-        tabbedPane.addTab("tab2", jPanel3);
+        tabbedPane.addTab("", jPanel3);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(tabbedPane)
-                .addContainerGap())
+            .addComponent(tabbedPane)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(tabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 568, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 12, Short.MAX_VALUE)
+                .addComponent(tabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -183,6 +190,7 @@ public class PasswordRecover extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCancelarCambiarContraseñaLoggin;
     private javax.swing.JTextField contrasenaText;
     private javax.swing.JPasswordField contrasenaTextP;
     private javax.swing.JButton jButton1;
