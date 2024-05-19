@@ -38,7 +38,7 @@ public class Loggin extends javax.swing.JFrame {
         setBackground(new java.awt.Color(51, 255, 51));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 249, 124), 3));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/co/edu/unicolombo/pb/proula/gui/images/cocina.png"))); // NOI18N
 
@@ -58,6 +58,7 @@ public class Loggin extends javax.swing.JFrame {
         passwordText.setForeground(new java.awt.Color(51, 51, 51));
         passwordText.setText(null);
 
+        jButton1.setBackground(new java.awt.Color(199, 252, 199));
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(102, 102, 102));
         jButton1.setText("Olvido su contraseña?");
@@ -68,8 +69,8 @@ public class Loggin extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(0, 153, 153));
-        jButton2.setFont(new java.awt.Font("Segoe UI Light", 0, 24)); // NOI18N
+        jButton2.setBackground(new java.awt.Color(0, 249, 124));
+        jButton2.setFont(new java.awt.Font("Segoe UI Light", 1, 24)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Iniciar sesion");
         jButton2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
@@ -82,8 +83,8 @@ public class Loggin extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
         jLabel3.setText("o");
 
-        jButton3.setBackground(new java.awt.Color(0, 0, 0));
-        jButton3.setFont(new java.awt.Font("Segoe UI Light", 0, 24)); // NOI18N
+        jButton3.setBackground(new java.awt.Color(17, 132, 17));
+        jButton3.setFont(new java.awt.Font("Segoe UI Light", 1, 24)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Registrarse");
         jButton3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
