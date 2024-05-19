@@ -36,9 +36,7 @@ public class PasswordRecover extends javax.swing.JFrame {
         nombreField = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-
         btnCancelarCambiarContraseñaLoggin = new javax.swing.JButton();
-
         jPanel3 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
         contrasenaText = new javax.swing.JTextField();
@@ -46,6 +44,7 @@ public class PasswordRecover extends javax.swing.JFrame {
         contrasenaTextP = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(199, 252, 199));
         jPanel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -70,11 +69,14 @@ public class PasswordRecover extends javax.swing.JFrame {
         });
         jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(124, 170, 100, 30));
 
-
         btnCancelarCambiarContraseñaLoggin.setBackground(new java.awt.Color(0, 249, 124));
         btnCancelarCambiarContraseñaLoggin.setText("Cancelar");
+        btnCancelarCambiarContraseñaLoggin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarCambiarContraseñaLogginActionPerformed(evt);
+            }
+        });
         jPanel2.add(btnCancelarCambiarContraseñaLoggin, new org.netbeans.lib.awtextra.AbsoluteConstraints(134, 220, -1, -1));
-
 
         tabbedPane.addTab("", jPanel2);
 
@@ -88,12 +90,8 @@ public class PasswordRecover extends javax.swing.JFrame {
             }
         });
 
-        contrasenaText.setText("Nueva contraseña");
-
         jLabel3.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         jLabel3.setText("Cambiar contrasena");
-
-        contrasenaTextP.setText("hhhhhhhhhhhhhhhhhhh");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -125,23 +123,12 @@ public class PasswordRecover extends javax.swing.JFrame {
                 .addComponent(contrasenaTextP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31)
                 .addComponent(jButton2)
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addContainerGap(105, Short.MAX_VALUE))
         );
 
         tabbedPane.addTab("", jPanel3);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tabbedPane)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 12, Short.MAX_VALUE)
-                .addComponent(tabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        getContentPane().add(tabbedPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -35, -1, 340));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -192,11 +179,11 @@ public class PasswordRecover extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btnCancelarCambiarContraseñaLogginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarCambiarContraseñaLogginActionPerformed
         this.setVisible(false);
         loggin.setVisible(true);
         loggin.setLocationRelativeTo(null);
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btnCancelarCambiarContraseñaLogginActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -205,7 +192,6 @@ public class PasswordRecover extends javax.swing.JFrame {
     private javax.swing.JPasswordField contrasenaTextP;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

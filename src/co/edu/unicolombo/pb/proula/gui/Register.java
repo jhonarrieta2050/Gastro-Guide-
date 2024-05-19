@@ -100,8 +100,6 @@ public class Register extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Segoe UI Historic", 0, 18)); // NOI18N
         jLabel6.setText("Contraseña");
 
-        passwordText.setText(null);
-
         jToggleButton1.setBackground(new java.awt.Color(153, 0, 255));
         jToggleButton1.setFont(new java.awt.Font("Segoe UI Historic", 0, 18)); // NOI18N
         jToggleButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -173,17 +171,18 @@ public class Register extends javax.swing.JFrame {
                                     .addComponent(ageText)
                                     .addComponent(passwordText)
                                     .addComponent(jLabel9)
-                                    .addComponent(jLabel6)))
-                            .addComponent(loginBtm, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addComponent(jLabel6)))))
                     .addGroup(ImagenContainerLayout.createSequentialGroup()
                         .addGap(277, 277, 277)
                         .addComponent(jLabel7))
                     .addGroup(ImagenContainerLayout.createSequentialGroup()
                         .addGap(87, 87, 87)
                         .addComponent(jLabel2))
-                    .addGroup(ImagenContainerLayout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ImagenContainerLayout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 550, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(ImagenContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(loginBtm, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 559, Short.MAX_VALUE)
+                            .addComponent(jToggleButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(27, Short.MAX_VALUE))
         );
         ImagenContainerLayout.setVerticalGroup(
