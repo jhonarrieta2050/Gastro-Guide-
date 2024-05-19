@@ -27,9 +27,9 @@ public class EditarReceta extends javax.swing.JFrame {
         
         tituloTextColocar.setText(receta.getTitulo());
         descripcionTextColocar.setText(receta.getDescripcion());
-        pasosTextColocar.setText(receta.pasos());
-        etiquetasTextColocar.setText(receta.etiquetas());
-        ingredientesTextColocar.setText(receta.ingredientes());
+        pasosTextColocar.setText(receta.getpasos());
+        etiquetasTextColocar.setText(receta.getEtiquetas());
+        ingredientesTextColocar.setText(receta.getIngredientes());
     }
 
     public void setRecipe(Recipes recipe) {
@@ -88,6 +88,7 @@ public class EditarReceta extends javax.swing.JFrame {
         pasosTextColocar = new javax.swing.JTextArea();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jScrollPane9 = new javax.swing.JScrollPane();
         jPanel3 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         tituloText = new javax.swing.JTextField();
@@ -120,14 +121,16 @@ public class EditarReceta extends javax.swing.JFrame {
         jLabel3.setText("descripcion");
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/co/edu/unicolombo/pb/proula/gui/images/mujer-editor.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/co/edu/unicolombo/pb/proula/gui/images/original-932b58a45ee463a5ce95af9fb4ace042.jpg"))); // NOI18N
         jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 204), 2));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        tituloTextColocar.setBackground(new java.awt.Color(199, 252, 199));
-        tituloTextColocar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        tituloTextColocar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(199, 252, 199), 3));
+
+        tituloTextColocar.setBackground(new java.awt.Color(255, 255, 255));
+        tituloTextColocar.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        tituloTextColocar.setForeground(new java.awt.Color(0, 0, 0));
+
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -140,7 +143,12 @@ public class EditarReceta extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tituloTextColocar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
+
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(27, Short.MAX_VALUE)
+                .addComponent(tituloTextColocar, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(21, 21, 21))
+
         );
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -151,7 +159,11 @@ public class EditarReceta extends javax.swing.JFrame {
         descripcionTextColocar.setEditable(false);
         descripcionTextColocar.setBackground(new java.awt.Color(199, 252, 199));
         descripcionTextColocar.setColumns(20);
-        descripcionTextColocar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+
+        descripcionTextColocar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        descripcionTextColocar.setForeground(new java.awt.Color(0, 0, 0));
+
+       
         descripcionTextColocar.setLineWrap(true);
         descripcionTextColocar.setRows(5);
         jScrollPane5.setViewportView(descripcionTextColocar);
@@ -161,7 +173,10 @@ public class EditarReceta extends javax.swing.JFrame {
         ingredientesTextColocar.setEditable(false);
         ingredientesTextColocar.setBackground(new java.awt.Color(199, 252, 199));
         ingredientesTextColocar.setColumns(20);
-        ingredientesTextColocar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+
+        ingredientesTextColocar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        ingredientesTextColocar.setForeground(new java.awt.Color(0, 0, 0));
+
         ingredientesTextColocar.setLineWrap(true);
         ingredientesTextColocar.setRows(5);
         jScrollPane6.setViewportView(ingredientesTextColocar);
@@ -183,7 +198,10 @@ public class EditarReceta extends javax.swing.JFrame {
         etiquetasTextColocar.setEditable(false);
         etiquetasTextColocar.setBackground(new java.awt.Color(199, 252, 199));
         etiquetasTextColocar.setColumns(20);
-        etiquetasTextColocar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+
+        etiquetasTextColocar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        etiquetasTextColocar.setForeground(new java.awt.Color(0, 0, 0));
+
         etiquetasTextColocar.setLineWrap(true);
         etiquetasTextColocar.setRows(5);
         etiquetasTextColocar.setSelectedTextColor(new java.awt.Color(0, 0, 0));
@@ -194,7 +212,10 @@ public class EditarReceta extends javax.swing.JFrame {
         pasosTextColocar.setEditable(false);
         pasosTextColocar.setBackground(new java.awt.Color(199, 252, 199));
         pasosTextColocar.setColumns(20);
-        pasosTextColocar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+
+        pasosTextColocar.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        pasosTextColocar.setForeground(new java.awt.Color(0, 0, 0));
+
         pasosTextColocar.setLineWrap(true);
         pasosTextColocar.setRows(5);
         jScrollPane8.setViewportView(pasosTextColocar);
@@ -223,77 +244,83 @@ public class EditarReceta extends javax.swing.JFrame {
             paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(paneLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 456, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(paneLayout.createSequentialGroup()
+                        .addGroup(paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addGroup(paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 305, Short.MAX_VALUE)
+                                .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(30, 30, 30)
                         .addGroup(paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(paneLayout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(jLabel13))
-                            .addGroup(paneLayout.createSequentialGroup()
-                                .addGroup(paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3)
-                                    .addGroup(paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 305, Short.MAX_VALUE)
-                                        .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                                .addGap(30, 30, 30)
-                                .addGroup(paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 294, Short.MAX_VALUE)
-                                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
-                            .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 629, Short.MAX_VALUE))
-                        .addContainerGap())
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 294, Short.MAX_VALUE)
+                            .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(paneLayout.createSequentialGroup()
+                        .addGap(15, 15, 15)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(21, 21, 21))
+                    .addGroup(paneLayout.createSequentialGroup()
                         .addGroup(paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(paneLayout.createSequentialGroup()
+                                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 629, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel11))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, paneLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
-                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(23, 23, 23))))))
+                            .addComponent(jLabel13))
+                        .addGap(0, 2, Short.MAX_VALUE))))
         );
         paneLayout.setVerticalGroup(
             paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(paneLayout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addGroup(paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel15))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
-                .addComponent(jLabel13)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(16, 16, 16)
-                .addGroup(paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel11)
-                    .addGroup(paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(paneLayout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 282, Short.MAX_VALUE))
+
+                    .addGroup(paneLayout.createSequentialGroup()
+                        .addGap(674, 674, 674)
+                        .addComponent(jLabel11)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(paneLayout.createSequentialGroup()
+                        .addContainerGap(53, Short.MAX_VALUE)
+                        .addGroup(paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel15))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(30, 30, 30)
+                        .addGroup(paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane6)
+                            .addComponent(jScrollPane5))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel13)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)))
+                .addGroup(paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(83, 83, 83))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, paneLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addContainerGap())
+
         );
 
         tabedPane.addTab("tab1", pane);
+
+        jScrollPane9.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -301,12 +328,12 @@ public class EditarReceta extends javax.swing.JFrame {
         jLabel5.setText("Titulo");
 
         tituloText.setBackground(new java.awt.Color(51, 51, 51));
-        tituloText.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        tituloText.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         tituloText.setForeground(new java.awt.Color(255, 255, 255));
 
         descripcionText.setBackground(new java.awt.Color(51, 51, 51));
         descripcionText.setColumns(20);
-        descripcionText.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        descripcionText.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         descripcionText.setForeground(new java.awt.Color(255, 255, 255));
         descripcionText.setLineWrap(true);
         descripcionText.setRows(5);
@@ -314,7 +341,7 @@ public class EditarReceta extends javax.swing.JFrame {
 
         ingredientesText.setBackground(new java.awt.Color(51, 51, 51));
         ingredientesText.setColumns(20);
-        ingredientesText.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        ingredientesText.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         ingredientesText.setForeground(new java.awt.Color(255, 255, 255));
         ingredientesText.setLineWrap(true);
         ingredientesText.setRows(5);
@@ -322,14 +349,17 @@ public class EditarReceta extends javax.swing.JFrame {
 
         etiquetasText.setBackground(new java.awt.Color(51, 51, 51));
         etiquetasText.setColumns(20);
-        etiquetasText.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        etiquetasText.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         etiquetasText.setForeground(new java.awt.Color(255, 255, 255));
         etiquetasText.setLineWrap(true);
         etiquetasText.setRows(5);
         jScrollPane3.setViewportView(etiquetasText);
 
         pasosText.setColumns(20);
-        pasosText.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+
+        pasosText.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        pasosText.setForeground(new java.awt.Color(0, 0, 0));
+
         pasosText.setLineWrap(true);
         pasosText.setRows(5);
         jScrollPane4.setViewportView(pasosText);
@@ -425,16 +455,18 @@ public class EditarReceta extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel18)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        tabedPane.addTab("tab2", jPanel3);
+        jScrollPane9.setViewportView(jPanel3);
+
+        tabedPane.addTab("tab2", jScrollPane9);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -446,7 +478,7 @@ public class EditarReceta extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(tabedPane, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -469,12 +501,7 @@ public class EditarReceta extends javax.swing.JFrame {
         String etiquetas = etiquetasText.getText();
         String pasos = pasosText.getText();
 
-        if(control.estanVacio(titulo,descripcion,ingredientes,etiquetas,pasos)){
-            JOptionPane.showMessageDialog(null, "Faltan algunos campos por llenar");
-            return;
-        }
-
-        errores Errores = control.validarRecetas(titulo, descripcion, ingredientes, etiquetas, pasos);
+        errores Errores = control.editarRecetasValidacion(titulo, descripcion, ingredientes, etiquetas, pasos);
 
         if(Errores.getPass()){
             String[] errores = Errores.getErrorName();
@@ -501,6 +528,11 @@ public class EditarReceta extends javax.swing.JFrame {
         recipe.recetasPanel.repaint();
         colocarDatos();
         tabedPane.setSelectedIndex(0);
+        tituloText.setText("");
+        descripcionText.setText("");
+        etiquetasText.setText("");
+        ingredientesText.setText("");
+        pasosText.setText("");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -543,6 +575,7 @@ public class EditarReceta extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JPanel pane;
     private javax.swing.JTextArea pasosText;
     private javax.swing.JTextArea pasosTextColocar;

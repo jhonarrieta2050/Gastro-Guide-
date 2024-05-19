@@ -12,7 +12,7 @@ public class Recetas {
     private ArrayList<String> ingredientes;
     private ArrayList<String> etiquetas;
     private ArrayList<String> pasos;
-     private Date fechaCreada;
+    private Date fechaCreada;
     private int id;
 
     public int getId() {
@@ -39,24 +39,12 @@ public class Recetas {
         this.descripcion = descripcion;
     }
 
-    public ArrayList<String> getIngredientes() {
-        return ingredientes;
-    }
-
     public void setIngredientes(ArrayList<String> ingredientes) {
         this.ingredientes = ingredientes;
     }
 
-    public ArrayList<String> getEtiquetas() {
-        return etiquetas;
-    }
-
     public void setEtiquetas(ArrayList<String> etiquetas) {
         this.etiquetas = etiquetas;
-    }
-
-    public ArrayList<String> getPasos() {
-        return pasos;
     }
 
     public void setPasos(ArrayList<String> pasos) {
@@ -70,46 +58,38 @@ public class Recetas {
     public void setFechaCreada(Date fechaCreada) {
         this.fechaCreada = fechaCreada;
     }
-    
-    
-    public String pasos(){
+  
+    public String getpasos(){
         
-        StringBuilder cadenaConstructor = new StringBuilder();
-        
-         for (int i = 0; i < pasos.size(); i++) {
-            cadenaConstructor.append(pasos.get(i));
-            if (i < pasos.size() - 1) { 
-            cadenaConstructor.append("--------------");
-        }
-    }
-        
-        return cadenaConstructor.toString();
-    }
-    public String ingredientes(){
-        
-        StringBuilder cadenaConstructor = new StringBuilder();
-        
-         for (int i = 0; i < ingredientes.size(); i++) {
-            cadenaConstructor.append(ingredientes.get(i));
-            if (i < pasos.size() - 1) { 
-            cadenaConstructor.append(",");
-        }
-    }
-        
-        return cadenaConstructor.toString();
-    }
-    public String etiquetas(){
-        
-        StringBuilder cadenaConstructor = new StringBuilder();
-        
-         for (int i = 0; i < etiquetas.size(); i++) {
-            cadenaConstructor.append(etiquetas.get(i));
-            if (i < pasos.size() - 1) { 
-            cadenaConstructor.append(",");
-        }
-    }
-        
-        return cadenaConstructor.toString();
+        String Pasos = separador(pasos);
+        return Pasos;
     }
     
+    public String getIngredientes(){
+        
+        String Ingredientes = separador(ingredientes);
+        return Ingredientes;
+    }
+    public String getEtiquetas(){
+       
+        String Etiquetas = separador(etiquetas);
+        
+       return Etiquetas;
+    }
+    
+    public String separador(ArrayList<String> array){
+         
+        StringBuilder cadenaConstructor = new StringBuilder();
+        
+        for (int i = 0; i < array.size(); i++) {
+            String palabra = array.get(i);
+            cadenaConstructor.append('-').append(palabra);
+            
+                if (cadenaConstructor.charAt(cadenaConstructor.length() - 1) != '.') {
+                    cadenaConstructor.append(".");
+                }
+                cadenaConstructor.append("\n");
+        }
+       return cadenaConstructor.toString().trim();
+    }
 }

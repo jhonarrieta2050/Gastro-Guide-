@@ -301,7 +301,35 @@ public class Controlador {
         ErrorList.add("Debe haber minimo una etiqueta");
     }
 
-    if (pasos.isEmpty() || !pasos.matches("\\d+\\..*?") ) {
+    if (pasos.isEmpty() || !Pattern.matches("(?s)\\d+\\..*?(?=\\d+\\.|$)", pasos)) {
+    ErrorList.add("Debe haber pasos en la receta, en el formato correcto.");
+    }
+        
+        if (!ErrorList.isEmpty()) {
+        Error.setPass(true);
+        String[] errores = ErrorList.toArray(String[]::new);
+        Error.setErrorName(errores);
+    } else {
+        Error.setPass(false); 
+    }
+
+    return Error;
+    }
+    
+    public errores editarRecetasValidacion(String titulo, String descripcion,String ingredientes,String etiquetas,String pasos){
+        errores Error = new errores();
+        ArrayList<String> ErrorList = new ArrayList<>();
+        
+         if (!titulo.isEmpty() && titulo.length() < 2) {
+            ErrorList.add("Se requieren mínimo 2 caracteres en el titulo");
+        } 
+
+        if (!descripcion.isEmpty() && descripcion.length() < 10) {
+        ErrorList.add("Se requieren mínimo 10 caracteres en la descripcion");
+    } 
+        
+
+    if (!pasos.isEmpty() &&   pasos.length() < 4) {
         ErrorList.add("debe haber pasos en la receta");
     }
         
@@ -310,7 +338,7 @@ public class Controlador {
         String[] errores = ErrorList.toArray(String[]::new);
         Error.setErrorName(errores);
     } else {
-        Error.setPass(false); // No hay errores, por lo tanto, no establecemos la bandera en true
+        Error.setPass(false);
     }
 
     return Error;
@@ -326,15 +354,15 @@ public class Controlador {
             
             char caracter = texto.charAt(i);
             
-            if(caracter != ',' ){
+            if(caracter != ',' && caracter != '\n' ){
                 palabra.append(caracter);
             }else{
-                array.add(palabra.toString());
+                array.add(palabra.toString().trim());
                 palabra = new StringBuilder();
             }
         }
             if(palabra.length() > 0){
-                array.add(palabra.toString());
+                array.add(palabra.toString().trim());
              }
         
         return array;
@@ -343,15 +371,14 @@ public class Controlador {
     
     public ArrayList<String> separadorPasos(String pasos){
         
-        ArrayList<String> array = new ArrayList<>();
-     
-        Pattern expresionRegular = Pattern.compile("\\d+\\..*?(?=\\d+\\.|$)");
-        Matcher findIndex = expresionRegular.matcher(pasos);
+          ArrayList<String> array = new ArrayList<>();
+        Pattern expresionRegular = Pattern.compile("\\d+\\..*?(?=\\d+\\.|$)", Pattern.DOTALL);
+        Matcher grupo = expresionRegular.matcher(pasos);
 
-        while (findIndex.find()) {
-            array.add(findIndex.group().trim());
+        while (grupo.find()) {
+            array.add(grupo.group().trim());
         }
-
+        
         return array;
     }
     
@@ -392,13 +419,13 @@ public class Controlador {
                     descripcion = receta.getDescripcion();
                 }
                  if(ingredientes.isEmpty()){
-                    ingredientes = receta.ingredientes();
+                    ingredientes = receta.getIngredientes();
                 }
                  if(etiquetas.isEmpty()){
-                    etiquetas = receta.etiquetas();
+                    etiquetas = receta.getEtiquetas();
                 }
                  if(pasos.isEmpty()){
-                    pasos = receta.pasos();
+                    pasos = receta.getpasos();
                 }
                  
                 receta.setTitulo(titulo);

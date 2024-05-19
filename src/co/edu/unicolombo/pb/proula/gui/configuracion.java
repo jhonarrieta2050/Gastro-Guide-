@@ -44,6 +44,7 @@ public class configuracion extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+
         jButton2 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -51,12 +52,15 @@ public class configuracion extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
 
+
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+
 
         nombreText.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         nombreText.addActionListener(new java.awt.event.ActionListener() {
@@ -65,6 +69,7 @@ public class configuracion extends javax.swing.JFrame {
             }
         });
 
+
         apellidoText.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         apellidoText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -72,17 +77,21 @@ public class configuracion extends javax.swing.JFrame {
             }
         });
 
+
+
         correoText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 correoTextActionPerformed(evt);
             }
         });
 
+
         contrasenaText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 contrasenaTextActionPerformed(evt);
             }
         });
+
 
         jLabel10.setFont(new java.awt.Font("Segoe UI Emoji", 1, 14)); // NOI18N
         jLabel10.setText("Nombre");
@@ -95,6 +104,7 @@ public class configuracion extends javax.swing.JFrame {
 
         jLabel11.setFont(new java.awt.Font("Segoe UI Emoji", 1, 14)); // NOI18N
         jLabel11.setText("Contrasena");
+
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -116,6 +126,7 @@ public class configuracion extends javax.swing.JFrame {
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
+
                 .addContainerGap(14, Short.MAX_VALUE)
                 .addComponent(jLabel10)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -155,6 +166,7 @@ public class configuracion extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(0, 249, 124));
 
+
         jLabel1.setBackground(new java.awt.Color(153, 204, 255));
         jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 24)); // NOI18N
         jLabel1.setText("Configurar perfil");
@@ -175,6 +187,7 @@ public class configuracion extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/co/edu/unicolombo/pb/proula/gui/images/icons8-admin-settings-male-64.png"))); // NOI18N
 
         jLabel2.setText("Foto");
@@ -182,11 +195,26 @@ public class configuracion extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("¿Guardar cambios?");
 
+
+        nombreBtnEdit.setText("Editar");
+        nombreBtnEdit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nombreBtnEditActionPerformed(evt);
+            }
+        });
+
+        apellidoBtnEdit.setText("Editar");
+
+        correoBtnEdit.setText("Editar");
+
+        contrasenaBtnEdit.setText("Editar");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+
                 .addContainerGap()
                 .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
@@ -213,6 +241,7 @@ public class configuracion extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton2)
                 .addGap(56, 56, 56))
+
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -226,12 +255,14 @@ public class configuracion extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
+
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26))
+
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -307,12 +338,19 @@ public class configuracion extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_contrasenaTextActionPerformed
 
+    private void nombreBtnEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreBtnEditActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nombreBtnEditActionPerformed
+
     
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton apellidoBtnEdit;
     private javax.swing.JTextField apellidoText;
+    private javax.swing.JButton contrasenaBtnEdit;
     private javax.swing.JTextField contrasenaText;
+    private javax.swing.JButton correoBtnEdit;
     private javax.swing.JTextField correoText;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -326,7 +364,9 @@ public class configuracion extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
+
     private javax.swing.JPanel jPanel4;
+
     private javax.swing.JTextField nombreText;
     // End of variables declaration//GEN-END:variables
 

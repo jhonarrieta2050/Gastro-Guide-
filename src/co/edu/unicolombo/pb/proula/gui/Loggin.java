@@ -17,9 +17,7 @@ public class Loggin extends javax.swing.JFrame {
         initComponents();
     }
 
-    public void setControl(Controlador control){
-        this.controlador = control;
-    }
+    
 
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -179,8 +177,8 @@ public class Loggin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-
         registro.setVisible(true);
+        registro.setControl(controlador);
         registro.setLocationRelativeTo(null);
         registro.setLoggin(this);
         this.setVisible(false);
@@ -191,7 +189,10 @@ public class Loggin extends javax.swing.JFrame {
         String email = emailText.getText();
         String password = passwordText.getText();
         
-        
+        if(controlador.estanVacio(email,password)){
+            JOptionPane.showMessageDialog(null, "Faltan campos por llenar");
+            return;
+        }
         
         boolean pasar = controlador.pass(email, password);
         

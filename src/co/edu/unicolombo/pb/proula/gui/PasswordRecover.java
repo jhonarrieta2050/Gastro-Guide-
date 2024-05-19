@@ -36,7 +36,9 @@ public class PasswordRecover extends javax.swing.JFrame {
         nombreField = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+
         btnCancelarCambiarContraseñaLoggin = new javax.swing.JButton();
+
         jPanel3 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
         contrasenaText = new javax.swing.JTextField();
@@ -68,9 +70,11 @@ public class PasswordRecover extends javax.swing.JFrame {
         });
         jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(124, 170, 100, 30));
 
+
         btnCancelarCambiarContraseñaLoggin.setBackground(new java.awt.Color(0, 249, 124));
         btnCancelarCambiarContraseñaLoggin.setText("Cancelar");
         jPanel2.add(btnCancelarCambiarContraseñaLoggin, new org.netbeans.lib.awtextra.AbsoluteConstraints(134, 220, -1, -1));
+
 
         tabbedPane.addTab("", jPanel2);
 
@@ -188,6 +192,12 @@ public class PasswordRecover extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        this.setVisible(false);
+        loggin.setVisible(true);
+        loggin.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancelarCambiarContraseñaLoggin;
@@ -195,6 +205,7 @@ public class PasswordRecover extends javax.swing.JFrame {
     private javax.swing.JPasswordField contrasenaTextP;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
