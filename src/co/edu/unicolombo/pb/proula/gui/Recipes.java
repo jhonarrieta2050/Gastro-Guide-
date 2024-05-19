@@ -235,7 +235,7 @@ public class Recipes extends javax.swing.JFrame {
             .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 669, Short.MAX_VALUE)
         );
 
-        tituloText.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        tituloText.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
@@ -248,7 +248,7 @@ public class Recipes extends javax.swing.JFrame {
         jScrollPane3.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
         descripcionText.setColumns(20);
-        descripcionText.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        descripcionText.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         descripcionText.setLineWrap(true);
         descripcionText.setRows(5);
         jScrollPane3.setViewportView(descripcionText);
@@ -260,7 +260,7 @@ public class Recipes extends javax.swing.JFrame {
         jScrollPane4.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
         ingredientesText.setColumns(20);
-        ingredientesText.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        ingredientesText.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         ingredientesText.setLineWrap(true);
         ingredientesText.setRows(5);
         jScrollPane4.setViewportView(ingredientesText);
@@ -300,7 +300,7 @@ public class Recipes extends javax.swing.JFrame {
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(jLabel6)
-                        .addGap(0, 862, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
