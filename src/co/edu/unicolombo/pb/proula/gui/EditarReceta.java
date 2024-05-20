@@ -303,6 +303,11 @@ public class EditarReceta extends javax.swing.JFrame {
         tituloText.setBackground(new java.awt.Color(51, 51, 51));
         tituloText.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         tituloText.setForeground(new java.awt.Color(255, 255, 255));
+        tituloText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tituloTextActionPerformed(evt);
+            }
+        });
 
         descripcionText.setBackground(new java.awt.Color(51, 51, 51));
         descripcionText.setColumns(20);
@@ -506,6 +511,10 @@ public class EditarReceta extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         tabedPane.setSelectedIndex(0);
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void tituloTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tituloTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tituloTextActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

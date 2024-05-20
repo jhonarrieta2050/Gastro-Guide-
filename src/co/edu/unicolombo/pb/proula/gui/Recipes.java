@@ -131,7 +131,6 @@ public class Recipes extends javax.swing.JFrame {
 
         jButton2.setBackground(new java.awt.Color(255, 255, 102));
         jButton2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(0, 0, 0));
         jButton2.setText("Volver");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -141,14 +140,14 @@ public class Recipes extends javax.swing.JFrame {
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("Cremos una receta!");
+        jLabel9.setText("Creemos una nueva receta!");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(251, Short.MAX_VALUE)
+                .addContainerGap(128, Short.MAX_VALUE)
                 .addComponent(jLabel9)
                 .addGap(215, 215, 215)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -172,9 +171,7 @@ public class Recipes extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(0, 0, 20));
         jPanel4.setPreferredSize(new java.awt.Dimension(973, 120));
 
-        jToggleButton1.setBackground(new java.awt.Color(255, 255, 255));
         jToggleButton1.setFont(new java.awt.Font("Segoe UI Emoji", 0, 24)); // NOI18N
-        jToggleButton1.setForeground(new java.awt.Color(0, 0, 0));
         jToggleButton1.setText("Cancelar");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -182,9 +179,7 @@ public class Recipes extends javax.swing.JFrame {
             }
         });
 
-        jToggleButton2.setBackground(new java.awt.Color(255, 255, 255));
         jToggleButton2.setFont(new java.awt.Font("Segoe UI Emoji", 0, 24)); // NOI18N
-        jToggleButton2.setForeground(new java.awt.Color(0, 0, 0));
         jToggleButton2.setText("Subir");
         jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -238,11 +233,9 @@ public class Recipes extends javax.swing.JFrame {
         tituloText.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Titulo de tu receta:");
 
         jLabel4.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Descripcion:");
 
         jScrollPane3.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -254,7 +247,6 @@ public class Recipes extends javax.swing.JFrame {
         jScrollPane3.setViewportView(descripcionText);
 
         jLabel5.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Ingredientes y cantidad:");
 
         jScrollPane4.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -266,7 +258,6 @@ public class Recipes extends javax.swing.JFrame {
         jScrollPane4.setViewportView(ingredientesText);
 
         jLabel6.setFont(new java.awt.Font("Segoe UI Historic", 0, 24)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Pasos:");
 
         jScrollPane5.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -288,7 +279,6 @@ public class Recipes extends javax.swing.JFrame {
 
         jLabel7.setBackground(new java.awt.Color(0, 0, 0));
         jLabel7.setFont(new java.awt.Font("Segoe UI Emoji", 0, 24)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("Etiquetas:");
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);

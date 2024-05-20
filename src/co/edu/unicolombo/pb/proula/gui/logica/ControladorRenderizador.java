@@ -15,6 +15,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
+
 
 public class ControladorRenderizador {
     
@@ -89,5 +91,7 @@ public class ControladorRenderizador {
         
         return arrayPanel;
     }
+    
+    
     
 }

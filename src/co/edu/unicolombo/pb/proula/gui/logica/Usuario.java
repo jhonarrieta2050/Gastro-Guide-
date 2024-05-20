@@ -12,7 +12,7 @@ public class Usuario implements Serializable {
     public String correo;
     public String contrasena;
     public Date nacimiento;
-    public ArrayList<Recetas> recetas = new ArrayList();
+    public static  ArrayList<Recetas> recetas = new ArrayList();
     
     
     public Usuario() {
