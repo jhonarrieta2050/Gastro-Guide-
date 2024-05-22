@@ -7,13 +7,13 @@ import java.util.Date;
 
 public class Recetas {
     
-    public static String titulo;
-    public static String descripcion;
-    public static ArrayList<String> ingredientes;
-    public static ArrayList<String> etiquetas;
-    public static ArrayList<String> pasos;
-    public static Date fechaCreada;
-    public static int id;
+    public  String titulo;
+    public  String descripcion;
+    public  ArrayList<String> ingredientes;
+    public  ArrayList<String> etiquetas;
+    public  ArrayList<String> pasos;
+    public  Date fechaCreada;
+    public  int id;
 
     public int getId() {
         return id;
