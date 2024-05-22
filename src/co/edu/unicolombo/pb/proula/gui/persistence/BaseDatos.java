@@ -21,7 +21,7 @@ public class BaseDatos implements Serializable{
     
     public ArrayList<Usuario> obtenerBaseDatos(){
         try {
-            baseDatos = (ArrayList<Usuario>) GestionDatos.recuperar("datos");
+            this.baseDatos = (ArrayList<Usuario>) GestionDatos.recuperar("datos");
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -41,7 +41,7 @@ public class BaseDatos implements Serializable{
     
     public void recorrer(){
         try {
-            baseDatos = (ArrayList<Usuario>) GestionDatos.recuperar("datos");
+            this.baseDatos = (ArrayList<Usuario>) GestionDatos.recuperar("datos");
         } catch (Exception e) {
             System.out.println(e);
         }

@@ -3,6 +3,7 @@ package co.edu.unicolombo.pb.proula.gui;
 import co.edu.unicolombo.pb.proula.gui.logica.Controlador;
 import javax.swing.JOptionPane;
 import co.edu.unicolombo.pb.proula.gui.persistence.BaseDatos;
+import javax.swing.JFrame;
 public class Loggin extends javax.swing.JFrame {
 
     
@@ -203,6 +204,7 @@ public class Loggin extends javax.swing.JFrame {
             
             inicio.setVisible(true);
             inicio.setLocationRelativeTo(null);
+            inicio.setSize(1550, 800);
             inicio.setLoggin(this);
             
             controlador.verificarContrasena(password);

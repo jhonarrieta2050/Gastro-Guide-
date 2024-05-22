@@ -439,6 +439,8 @@ public class Controlador {
                          baseDatos.guardarBaseDatos(listaUsuarios);
                          actualizarUsuarioActual();
                          return;
+                         
+                         
                  }
                 }
                 
@@ -459,6 +461,29 @@ public class Controlador {
         
          throw new IllegalArgumentException("La contrasenas ingresadas no concuerdan, intentelo nuevamente");
     }
+    
+    public ArrayList<Usuario> obtenerBaseDatosInicio(){
+        return baseDatos.obtenerBaseDatos();
+    }
+    
+    public Object[] usuarioAleatorio(){
+        
+        Object[] USUARIO = new Object[2];
+        
+        ArrayList<Usuario> usuarios = baseDatos.obtenerBaseDatos();
+        int usuarioRandom = (int) (Math.random() * usuarios.size());
+        
+        Usuario usuario = usuarios.get(usuarioRandom);
+        USUARIO[0] = usuario;
+        
+        ArrayList<Recetas> recetasUsuario = usuario.getRecetas();
+        int recetaRandom = (int) (Math.random() * recetasUsuario.size());
+         
+        Recetas receta = recetasUsuario.get(recetaRandom);
+        USUARIO[1] = receta;
+        
+        return USUARIO;
+}
     
 }
 

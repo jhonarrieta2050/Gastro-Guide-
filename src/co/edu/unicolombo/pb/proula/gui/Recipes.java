@@ -24,6 +24,23 @@ public class Recipes extends javax.swing.JFrame {
         this.control = control;
     }
     
+    public void renderizarInicio(){
+        try{
+        ArrayList<JPanel> array = controladorRenderizado.renderizarRecetas(control.getUsuarioActual(),control,this);
+       
+       recetasPanel.removeAll();
+       
+        for (JPanel panel : array) {
+            
+            recetasPanel.add(panel,0);
+        }
+        
+        recetasPanel.revalidate();
+        recetasPanel.repaint();
+        }catch(IllegalArgumentException e){
+            System.out.println("aun no hay recetas");
+        }
+    }
     
     public Recipes() {
         initComponents();
@@ -374,7 +391,11 @@ public class Recipes extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        
+    tituloText.setText("");
+    descripcionText.setText("");
+    ingredientesText.setText("");
+    etiquetasText.setText("");
+    pasosText.setText("");
         
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
@@ -418,10 +439,16 @@ public class Recipes extends javax.swing.JFrame {
         recetasPanel.revalidate();
         recetasPanel.repaint();
         
+        tituloText.setText("");
+        descripcionText.setText("");
+        ingredientesText.setText("");
+        etiquetasText.setText("");
+        pasosText.setText("");
     }//GEN-LAST:event_jToggleButton2ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         
+        recetasPanel.removeAll();
         this.setVisible(false);
         inicio.setVisible(true);
         inicio.setLocationRelativeTo(null);

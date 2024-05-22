@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package co.edu.unicolombo.pb.proula.gui;
 
 import co.edu.unicolombo.pb.proula.gui.logica.Controlador;
@@ -111,13 +108,15 @@ public class EditarReceta extends javax.swing.JFrame {
         jRadioButton1.setText("jRadioButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        pane.setBackground(new java.awt.Color(255, 255, 255));
+        pane.setBackground(new java.awt.Color(255, 204, 153));
         pane.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         pane.setPreferredSize(new java.awt.Dimension(1111, 650));
 
         jLabel3.setBackground(new java.awt.Color(51, 51, 51));
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("descripcion");
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -126,44 +125,38 @@ public class EditarReceta extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-
         tituloTextColocar.setBackground(new java.awt.Color(255, 255, 255));
         tituloTextColocar.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         tituloTextColocar.setForeground(new java.awt.Color(0, 0, 0));
-
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(tituloTextColocar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(27, Short.MAX_VALUE)
                 .addComponent(tituloTextColocar, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(21, 21, 21))
-
         );
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Titulo");
 
         jScrollPane5.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
         descripcionTextColocar.setEditable(false);
-        descripcionTextColocar.setBackground(new java.awt.Color(199, 252, 199));
+        descripcionTextColocar.setBackground(new java.awt.Color(255, 255, 255));
         descripcionTextColocar.setColumns(20);
-
         descripcionTextColocar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         descripcionTextColocar.setForeground(new java.awt.Color(0, 0, 0));
-
-       
         descripcionTextColocar.setLineWrap(true);
         descripcionTextColocar.setRows(5);
         jScrollPane5.setViewportView(descripcionTextColocar);
@@ -171,37 +164,36 @@ public class EditarReceta extends javax.swing.JFrame {
         jScrollPane6.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
         ingredientesTextColocar.setEditable(false);
-        ingredientesTextColocar.setBackground(new java.awt.Color(199, 252, 199));
+        ingredientesTextColocar.setBackground(new java.awt.Color(255, 255, 255));
         ingredientesTextColocar.setColumns(20);
-
         ingredientesTextColocar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         ingredientesTextColocar.setForeground(new java.awt.Color(0, 0, 0));
-
         ingredientesTextColocar.setLineWrap(true);
         ingredientesTextColocar.setRows(5);
         jScrollPane6.setViewportView(ingredientesTextColocar);
 
         jLabel4.setBackground(new java.awt.Color(51, 51, 51));
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Ingredientes");
 
         jLabel13.setBackground(new java.awt.Color(51, 51, 51));
         jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("Pasos");
 
         jLabel15.setBackground(new java.awt.Color(51, 51, 51));
         jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(0, 0, 0));
         jLabel15.setText("Etiquetas");
 
         jScrollPane7.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
         etiquetasTextColocar.setEditable(false);
-        etiquetasTextColocar.setBackground(new java.awt.Color(199, 252, 199));
+        etiquetasTextColocar.setBackground(new java.awt.Color(255, 255, 255));
         etiquetasTextColocar.setColumns(20);
-
         etiquetasTextColocar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         etiquetasTextColocar.setForeground(new java.awt.Color(0, 0, 0));
-
         etiquetasTextColocar.setLineWrap(true);
         etiquetasTextColocar.setRows(5);
         etiquetasTextColocar.setSelectedTextColor(new java.awt.Color(0, 0, 0));
@@ -210,18 +202,17 @@ public class EditarReceta extends javax.swing.JFrame {
         jScrollPane8.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
         pasosTextColocar.setEditable(false);
-        pasosTextColocar.setBackground(new java.awt.Color(199, 252, 199));
+        pasosTextColocar.setBackground(new java.awt.Color(255, 255, 255));
         pasosTextColocar.setColumns(20);
-
         pasosTextColocar.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         pasosTextColocar.setForeground(new java.awt.Color(0, 0, 0));
-
         pasosTextColocar.setLineWrap(true);
         pasosTextColocar.setRows(5);
         jScrollPane8.setViewportView(pasosTextColocar);
 
-        jButton2.setBackground(new java.awt.Color(0, 249, 124));
+        jButton2.setBackground(new java.awt.Color(255, 255, 0));
         jButton2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(0, 0, 0));
         jButton2.setText("Volver");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -229,8 +220,9 @@ public class EditarReceta extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(17, 132, 17));
+        jButton3.setBackground(new java.awt.Color(255, 255, 0));
         jButton3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(0, 0, 0));
         jButton3.setText("Editar");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -280,13 +272,12 @@ public class EditarReceta extends javax.swing.JFrame {
             paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(paneLayout.createSequentialGroup()
                 .addGroup(paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-
                     .addGroup(paneLayout.createSequentialGroup()
                         .addGap(674, 674, 674)
                         .addComponent(jLabel11)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(paneLayout.createSequentialGroup()
-                        .addContainerGap(53, Short.MAX_VALUE)
+                        .addContainerGap(95, Short.MAX_VALUE)
                         .addGroup(paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1)
                             .addComponent(jLabel15))
@@ -307,7 +298,7 @@ public class EditarReceta extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)))
-                .addGroup(paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(83, 83, 83))
@@ -315,7 +306,6 @@ public class EditarReceta extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                 .addContainerGap())
-
         );
 
         tabedPane.addTab("tab1", pane);
@@ -325,6 +315,7 @@ public class EditarReceta extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Titulo");
 
         tituloText.setBackground(new java.awt.Color(51, 51, 51));
@@ -356,16 +347,15 @@ public class EditarReceta extends javax.swing.JFrame {
         jScrollPane3.setViewportView(etiquetasText);
 
         pasosText.setColumns(20);
-
         pasosText.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         pasosText.setForeground(new java.awt.Color(0, 0, 0));
-
         pasosText.setLineWrap(true);
         pasosText.setRows(5);
         jScrollPane4.setViewportView(pasosText);
 
         jButton1.setBackground(new java.awt.Color(0, 255, 153));
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("Confirmar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -377,19 +367,24 @@ public class EditarReceta extends javax.swing.JFrame {
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/co/edu/unicolombo/pb/proula/gui/images/461f5199360285f31c64de89a66bab43.jpg"))); // NOI18N
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("Descripcion");
 
         jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
         jLabel14.setText("Etiquetas");
 
         jLabel16.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(0, 0, 0));
         jLabel16.setText("Ingredientes");
 
         jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(0, 0, 0));
         jLabel18.setText("Pasos");
 
         jButton4.setBackground(new java.awt.Color(0, 255, 255));
         jButton4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(0, 0, 0));
         jButton4.setText("Volver");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -468,18 +463,7 @@ public class EditarReceta extends javax.swing.JFrame {
 
         tabedPane.addTab("tab2", jScrollPane9);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tabedPane, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(tabedPane, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        getContentPane().add(tabedPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -42, -1, 1050));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
