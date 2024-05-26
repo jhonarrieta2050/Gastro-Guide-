@@ -1,18 +1,21 @@
 package co.edu.unicolombo.pb.proula.gui.logica;
 
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 
-public class Usuario {
-    private int id;
-    private String name;
-    private String apellido;
-    private String genero;
-    private String correo;
-    private String contrasena;
-    private Date nacimiento;
-    
+public class Usuario implements Serializable {
+    public int id;
+    public String name;
+    public String apellido;
+    public String genero;
+    public String correo;
+    public String contrasena;
+    public Date nacimiento;
+    public   ArrayList<Recetas> recetas = new ArrayList();    
     
     public Usuario() {
+        
     }
     
     public int getId(){
@@ -70,5 +73,22 @@ public class Usuario {
 
     public void setNacimiento(Date nacimiento) {
         this.nacimiento = nacimiento;
+    }
+    
+    public void setReceta(Recetas receta){
+        
+        recetas.add(receta);
+        
+    }
+    
+    public ArrayList<Recetas> getRecetas(){
+        
+        return recetas;
+        
+    }
+    
+    public void actualizarRecetas(ArrayList<Recetas> recetas){
+        this.recetas = recetas;
+        
     }
 }
